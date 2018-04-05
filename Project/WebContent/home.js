@@ -1,17 +1,53 @@
-function myFunction() {
-	console.log("Hi");
-    document.getElementById("myDropdown").classList.toggle("show");
+
+var slideIndex = 1;
+window.onload = function() {
+	showSlide(slideIndex);
+};
+
+
+function plusSlides(n){
+
+showSlide(slideIndex += n);
+
 }
 
-// Close the dropdown if the user clicks outside of it
-function removeI() {
-	console.log("No Hi");
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-    }
+
+function currentSlide(n) {
+
+showSlide(slideIndex = n);
+
+}
+
+
+function showSlide(n){
+
+var i;
+
+var slides = document.getElementsByClassName("myslides");
+
+var dots = document.getElementsByClassName("dots");
+
+if (n > slides.length) { slideIndex = 1};
+
+if (n < 1) { slideIndex = slides.length};
+
+for (i=0;i<slides.length;i++) {
+
+slides[i].style.display = "none";
+
+};
+
+for (i=0;i<dots.length;i++) {
+
+dots[i].className = dots[i].className.replace(" active","");
+
+};
+
+slides[slideIndex-1].style.display = "block";
+
+dots[slideIndex-1].className += " active";
+
+}
+
+
+
