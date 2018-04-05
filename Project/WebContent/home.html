@@ -8,7 +8,8 @@
 <link rel=icon href=images/mainico.ico>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 </head>
 
 <body>
@@ -28,23 +29,33 @@
 	<div class="headernavs">
 		<nav>
 			<ul>
-				<li class="tabs"><a href="#" onmouseover="myFunction()"
-					onmouseout="removeI()">Home</a>
-
-					<div id="myDropdown" class="dropdown-content">
-						<a href="#home">Home</a> <a href="#about">About</a> <a
-							href="#contact">Contact</a>
-
+				<li class="dropdown"><a href="#home">Home</a></li>
+				
+				<li class="dropdown"><a id = "services" href="#">Services
+				<i class="fa fa-caret-down" id = "arrow-cursor"></i>
+				</a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink">Transport</a> <a href="#about"
+							id="droplink">Tourism</a> <a href="#" id="droplink">Money</a> <a
+							href="#" id="droplink">Taxes</a>
 					</div></li>
-				<li class="tabs"><a href="#">Services</a> <i
-					class="fa fa-caret-down"></i></li>
-				<li class="tabs"><a href="#">Provinces</a></li>
-				<li class="tabs"><a href="#">Jobs</a></li>
-				<li class="tabs"><a href="#">Culture</a></li>
-				<li class="tabs"><a href="#">Statistics</a></li>
-				<li class="tabs"><a href="#">Services</a></li>
-				<li class="tabs"><a href="#">Health</a></li>
-				<li class="tabs"><a href="#">FAQs</a></li>
+				<li class="dropdown"><a href="#">Jobs</a></li>
+				<li class="dropdown"><a href="#">Culture</a></li>
+				<li class="dropdown"><a id = "provinces" href="#">Provinces
+				<i class="fa fa-caret-down" id = "arrow-cursor"></i>
+				</a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink">Alberta</a> 
+						<a href="#about" id="droplink">B.Columbia</a> 
+						<a href="#" id="droplink">Ontario</a> 
+						<a href="#" id="droplink">N.Brunswick</a>
+						<a href="#" id="droplink">Manitoba</a>
+						<a href="#" id="droplink">Quebec</a>
+						<a href="#" id="droplink">Nova Scotia</a>
+					</div></li>
+				<li class="dropdown"><a href="#" id="about">About Canada</a></li>
+				<li class="dropdown"><a href="#">FAQs</a></li>
+				<li class="dropdown"><a href="#" id="about">Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -102,7 +113,7 @@
 
 	<div class="a5">
 		<h4>Most Requested</h4>
-		<ul>
+		<div id = "mostrequests">
 			<a href="#">Create or Login to your account</a>
 			<br>
 			<br>
@@ -116,12 +127,12 @@
 			<br>
 			<br>
 			<a href="#">Know about the Canadian Culture</a>
-		</ul>
+		</div>
 	</div>
 
 	<div class="a6">
 		<h4>Resources</h4>
-		<ul>
+		<div id = "resources">
 			<a href="assets/ee-presentation-en.pdf" download>Guide for
 				Express Entry(PDF)</a>
 			<br>
@@ -136,7 +147,7 @@
 			<br>
 			<br>
 			<a href="#">Know about the Canadian Culture</a>
-		</ul>
+		</div>
 	</div>
 	<div id="latest-news">
 		<h3>Latest Immigration Updates</h3>
@@ -152,45 +163,95 @@
 		</div>
 		<div id="trendsdiv">
 			<p id="trendspara">Latest Express Entry draw Trends</p>
-			<article id="trendsarticle">
-				<img src="images/ITA_Nov.png" height="335" width="580" alt="Logo">
-			</article>
+
+			<div class="trendsimage fade">
+
+				<div class="numbers">1 / 4</div>
+
+				<div>
+					<img src="images/ITA_Nov.png" height="335" width="580" alt="Logo">
+				</div>
+
+			</div>
+
+
+			<div class="trendsimage fade">
+
+				<div class="numbers">2 / 4</div>
+
+				<div>
+					<img src="images/crs-17-may.jpg" height="335" width="580"
+						alt="Logo">
+				</div>
+
+			</div>
+
+
+			<div class="trendsimage fade">
+
+				<div class="numbers">3 / 4</div>
+
+				<div>
+					<img src="images/ITAAllTime.jpg" height="335" width="580"
+						alt="Logo">
+				</div>
+
+			</div>
+
+
+			<div class="trendsimage fade">
+
+				<div class="numbers">4 / 4</div>
+
+				<div>
+					<img src="images/CRS_Past10_3.jpg" height="335" width="580"
+						alt="Logo">
+				</div>
+
+			</div>
+
+
+			<a class="prev" onclick="incrImages(-1)">&#10094;</a> <a class="next"
+				onclick="incrImages(1)">&#10095;</a>
+
+			<div style="text-align: center">
+
+				<span class="navig" onclick="activeSlide(1)"></span> <span
+					class="navig" onclick="activeSlide(2)"></span> <span class="navig"
+					onclick="activeSlide(3)"></span> <span class="navig"
+					onclick="activeSlide(4)"></span>
+
+			</div>
 		</div>
 	</div>
 
-	<div id="finaldiv">
-		<div class="wrapper">
-			<h3>Know more</h3>
-			<p>ADD MORE</p>
-			<a href="#" class="button-2">Get Started</a>
-		</div>
-	</div>
 	<footer>
 		<div class="wrapper">
 			<div id="footer-info">
-			<div id = "footer_1">
-			<div id = "email">
-				<i class="material-icons" style="font-size:36px; color:black">email</i>
-				<p>expressentryinfo@cic.gc.ca</p>
-			</div>
-			<div id = "phone">
-				<i class="material-icons" style="font-size:36px; color:black">phone</i>
-				<p>+1-416-123-1234</p>
-			</div>
-			<div id = "openhours">
-				<i class="material-icons" style="font-size:36px; color:black">home</i>
-				<p>Monday - Friday : 8 AM - 5 PM</p>
-			</div>
-			<p id = "footer_1_para2">
-				<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a href="#">Careers</a> I <a href="#">History</a>
-			</p>
-			</div>
-			<div id = "footer_2">
-			<br>
-			<p>Copyright © 2018 Government of Canada</p>
-			<img src="images/can_footer.jpg" id="" height="70"
-					width="270" alt="Logo">
-			</div>
+				<div id="footer_1">
+					<div id="email">
+						<i class="material-icons" style="font-size: 36px; color: black">email</i>
+						<p>expressentryinfo@cic.gc.ca</p>
+					</div>
+					<div id="phone">
+						<i class="material-icons" style="font-size: 36px; color: black">phone</i>
+						<p>+1-416-123-1234</p>
+					</div>
+					<div id="openhours">
+						<i class="material-icons" style="font-size: 36px; color: black">home</i>
+						<p>Monday - Friday : 8 AM - 5 PM</p>
+					</div>
+					<p id="footer_1_para2">
+						<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a
+							href="#">Careers</a> I <a href="#">History</a>
+					</p>
+				</div>
+				<div id="footer_2">
+					<br>
+					<p>Copyright © 2018 Government of Canada</p>
+					<img src="images/can_footer.jpg" id="" height="70" width="270"
+						alt="Logo">
+				</div>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -1,51 +1,52 @@
 
-var slideIndex = 1;
+var imagePos = 1;
 window.onload = function() {
-	showSlide(slideIndex);
+	displayImage(imagePos);
 };
 
 
-function plusSlides(n){
 
-showSlide(slideIndex += n);
+function incrImages(n){
 
-}
-
-
-function currentSlide(n) {
-
-showSlide(slideIndex = n);
+displayImage(imagePos += n);
 
 }
 
 
-function showSlide(n){
+function activeSlide(n) {
+
+displayImage(imagePos = n);
+
+}
+
+
+function displayImage(n){
 
 var i;
 
-var slides = document.getElementsByClassName("myslides");
+var images = document.getElementsByClassName("trendsimage");
 
-var dots = document.getElementsByClassName("dots");
+var navig = document.getElementsByClassName("navig");
 
-if (n > slides.length) { slideIndex = 1};
+if (n > images.length) { imagePos = 1};
 
-if (n < 1) { slideIndex = slides.length};
+if (n < 1) { imagePos = images.length};
 
-for (i=0;i<slides.length;i++) {
+for (i=0;i<images.length;i++) {
 
-slides[i].style.display = "none";
-
-};
-
-for (i=0;i<dots.length;i++) {
-
-dots[i].className = dots[i].className.replace(" active","");
+images[i].style.display = "none";
 
 };
 
-slides[slideIndex-1].style.display = "block";
+for (i=0;i<navig.length;i++) {
 
-dots[slideIndex-1].className += " active";
+navig[i].className = navig[i].className.replace(" active","");
+
+};
+
+images[imagePos-1].style.display = "block";
+
+navig[imagePos-1].className += " active";
 
 }
 
