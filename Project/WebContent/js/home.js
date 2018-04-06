@@ -63,7 +63,7 @@ function headerImageSlider() {
 		}
 		images[imagePos-1].style.display = "block";
 		imagePos++;
-		setTimeout(headerImageSlider,3500);
+		setTimeout(headerImageSlider,2500);
 
 }
 

@@ -130,7 +130,7 @@ header h1 .color {
 	padding-left: 10px;
 }
 
-#about {
+.about {
 	margin-top: -7px;
 }
 
@@ -578,12 +578,20 @@ color:#1c5080;
     display: block;
 }
 
-#droplink:hover {
+#droplink1:hover,#droplink2:hover,#droplink3:hover,#droplink4:hover,
+#droplink5:hover,#droplink6:hover,
+#droplink7:hover,#droplink8:hover,
+#droplink10:hover,#droplink11:hover
+,#droplink9:hover {
 	background-color: #1c5080;
 	color:white;
 }
 
-#droplink {
+#droplink1,#droplink2,#droplink3,#droplink4,
+#droplink5,#droplink6,
+#droplink7,#droplink8,
+#droplink10,#droplink11
+,#droplink9 {
 	color:black;
 }
 
@@ -690,7 +698,7 @@ background-color: #333;
 
 
 
-#arrow-cursor {
+#arrow-cursora,#arrow-cursorb {
 	margin-right: -30px;
 	padding-left:5px;
 	color:white;
