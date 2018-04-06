@@ -2,6 +2,7 @@
 var imagePos = 1;
 window.onload = function() {
 	displayImage(imagePos);
+	headerImageSlider();
 };
 
 
@@ -47,6 +48,22 @@ navig[i].className = navig[i].className.replace(" active","");
 images[imagePos-1].style.display = "block";
 
 navig[imagePos-1].className += " active";
+
+}
+function headerImageSlider() {
+	var i;
+	var images = document.getElementsByClassName("hiimage");
+	for (i=0;i<images.length;i++) {
+
+		images[i].style.display = "none";
+
+		};
+		if (imagePos > images.length) {
+			imagePos = 1;
+		}
+		images[imagePos-1].style.display = "block";
+		imagePos++;
+		setTimeout(headerImageSlider,3500);
 
 }
 

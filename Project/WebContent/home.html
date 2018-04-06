@@ -2,9 +2,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Canada Immigration</title>
+<link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel=icon href=images/mainico.ico>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +12,7 @@
 </head>
 
 <body>
-	<script src="home.js"></script>
+	<script src="js/home.js"></script>
 	<header>
 		<div class="wrapper">
 			<h1>
@@ -32,18 +31,17 @@
 				<li class="dropdown"><a href="#home">Home</a></li>
 				
 				<li class="dropdown"><a id = "services" href="#">Services
-				<i class="fa fa-caret-down" id = "arrow-cursor"></i>
-				</a> 
+				<i class="fa fa-caret-down" id = "arrow-cursor"></i></a> 
 					<div class="dropdown-content">
-						<a href="#" id="droplink">Transport</a> <a href="#about"
-							id="droplink">Tourism</a> <a href="#" id="droplink">Money</a> <a
-							href="#" id="droplink">Taxes</a>
+						<a href="#" id="droplink">Transport</a> 
+						<a href="#about" id="droplink">Tourism</a> 
+						<a href="#" id="droplink">Money</a> 
+						<a href="#" id="droplink">Taxes</a>
 					</div></li>
 				<li class="dropdown"><a href="#">Jobs</a></li>
 				<li class="dropdown"><a href="#">Culture</a></li>
 				<li class="dropdown"><a id = "provinces" href="#">Provinces
-				<i class="fa fa-caret-down" id = "arrow-cursor"></i>
-				</a> 
+				<i class="fa fa-caret-down" id = "arrow-cursor"></i></a> 
 					<div class="dropdown-content">
 						<a href="#" id="droplink">Alberta</a> 
 						<a href="#about" id="droplink">B.Columbia</a> 
@@ -53,17 +51,53 @@
 						<a href="#" id="droplink">Quebec</a>
 						<a href="#" id="droplink">Nova Scotia</a>
 					</div></li>
-				<li class="dropdown"><a href="#" id="about">About Canada</a></li>
+				<li class="dropdown"><a href="#" id="about">About Jobs</a></li>
 				<li class="dropdown"><a href="#">FAQs</a></li>
 				<li class="dropdown"><a href="#" id="about">Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
-	<div id="mainimg">
-		<img class="mySlides" src="images/main-pic.jpg"
-			style="width: 1200px; height: 600px;">
+	 <div class = "mainSlider">
+		  <div class="hiimage fade">
+				<div>
+					<img src="images/main-pic.jpg" style="width: 1200px; height: 600px;" alt="canada_pic">
+				</div>
+		   </div>
 
-	</div>
+
+			<div class="hiimage fade">
+				<div>
+					<img src="images/niagra.jpg" style="width: 1200px; height: 600px;" alt="niagra">
+				</div>
+			</div>
+
+
+			<div class="hiimage fade">
+				<div>
+					<img src="images/mountain.jpg" style="width: 1200px; height: 600px;" alt="mountain">
+				</div>
+			</div>
+
+
+			<div class="hiimage fade">
+				<div>
+					<img src="images/parliament.jpg" style="width: 1200px; height: 600px;" alt="parliament">
+				</div>
+			</div>
+			
+			<div class="hiimage fade">
+				<div>
+					<img src="images/CN.jpg" style="width: 1200px; height: 600px;" alt="CN_Tower">
+				</div>
+			</div>
+			
+			<div class="hiimage fade">
+				<div>
+					<img src="images/maple.jpg" style="width: 1200px; height: 600px;" alt="maple">
+				</div>
+			</div>
+		</div>
+
 	<br>
 	<div id="applicationdiv">
 		<div class="wrapper">
@@ -73,7 +107,7 @@
 					<p>
 						<small>Immigrate to Canada through Express Entry program</small>
 					</p>
-					<a href="#" class="applicationslink">Apply Now</a>
+					<a href="userregistration.html" class="applicationslink">Apply Now</a>
 				</div>
 			</article>
 			<article class="a2">
@@ -86,8 +120,7 @@
 				</div>
 			</article>
 
-			<article class="a3"
-				style="background-image: url('images/article-image-2.jpg');">
+			<article class="a3">
 				<div class="overlay">
 					<h4>Check Eligibility</h4>
 					<p>
@@ -97,14 +130,13 @@
 				</div>
 			</article>
 
-			<article class="a4"
-				style="background-image: url('images/article-image-2.jpg');">
+			<article class="a4">
 				<div class="overlay">
 					<h4>About Canada</h4>
 					<p>
 						<small>Know in detail about Canada</small>
 					</p>
-					<a href="#" class="applicationslink">View more</a>
+					<a href="about_canada.html" class="applicationslink">View more</a>
 				</div>
 			</article>
 			<div class="clear"></div>
@@ -137,16 +169,16 @@
 				Express Entry(PDF)</a>
 			<br>
 			<br>
-			<a href="#">Latest Immigration Changes(PDF)</a>
+			<a href="assets/immigration_changes.pdf" download>Latest Immigration Changes(PDF)</a>
 			<br>
 			<br>
-			<a href="#">Get to know more about Canada</a>
+			<a href="assets/immi_streams.pdf" download>Know about Immigration Streams(PDF)</a>
 			<br>
 			<br>
-			<a href="#">Employment Opportunities</a>
+			<a href="assets/jobs_stats.pdf" download>Detailed Job Opportunities Report(PDF)</a>
 			<br>
 			<br>
-			<a href="#">Know about the Canadian Culture</a>
+			<a href="assets/facts_stats.pdf" download>Explore about Provincial Programs(PDF)</a>
 		</div>
 	</div>
 	<div id="latest-news">
