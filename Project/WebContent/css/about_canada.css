@@ -1,5 +1,14 @@
 body{
 	width:1400px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color:#1c5080;
+}
+
+p {
+	color:black;
+}
+#footer_1 p, #footer_2 p {
+	color :#1c5080;
 }
 header {
 
@@ -106,6 +115,7 @@ header h1 .color {
     width: 19%;
     padding: 30px 30px 5px;
 	margin:0px;
+	border-top: 1px solid #1c5080;
 	}
 	
 #email i {
@@ -200,7 +210,7 @@ header h1 .color {
 
 	height: 180px;
 
-	margin-top: -69px;
+	margin-top: -49px;
 
 	margin-left:-250px;
 
