@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round'
+	rel='stylesheet' type='text/css'>
+	<link rel="stylesheet"
+
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+
+	rel="stylesheet">
+      <link rel="stylesheet" href="userregstyle.css">
+<script type="text/javascript"  charset="UTF-8"></script></head>
+<body>
+
+    <head>
+        <meta charset="utf-8">
+        <title>User Registration</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link  rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+		<h1 id = "header">
+		<div id = "headerpic">
+			<img src="logo.jpg" id="" class="floatleft" height="120"
+					width="120" alt="">
+		</div>
+			<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+			</div>
+		</h1>
+		<h1 id = "pageheader">
+		Provide your details to create the account.
+		</h1>
+      <form action="index.html" method="post">
+      
+      <div id = "h1div">
+        <h1 id = "formheader">User Registration</h1>
+       </div>
+        <fieldset>
+          <legend>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required><div style="color:red;" id="errormessage"></div>
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" required><div style="color:red;" id="ermessage"></div>
+          
+           <label for="username">Preferred username:</label>
+          <input type="text" id="username" name="username" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required>
+          
+          <label>Age:</label>
+		  <input type="text" id="age" name="age" required>
+		  
+		  <label for="country">Resident country:</label>
+          <input type="text" id="country" name="country" required><div style="color:red;" id="errmessage"></div>
+		  
+		   <label for="passport">Passport valid through:</label>
+          <input type="text" id="passport" name="passport"  required>
+		  
+          </fieldset>
+        
+        <fieldset>
+          <legend>Your profile</legend>
+          <label for="bio">Biography:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <button type="submit" onclick ="validate()">Sign Up</button>
+      </form>
+	  
+	  <script>
+    function validate(){
+       var name = document.getElementById('name').value;
+	     if(name == ""){
+            document.getElementById('errormessage').innerHTML = "Please enter your name";
+        } 
+       var mail = document.getElementById('mail').value; 
+	   if (mail == ""){
+	       document.getElementById('ermessage').innerHTML = "Please enter your Email";
+         }
+	   var country = document.getElementById('country').value;
+		  if(country == ""){
+            document.getElementById('errmessage').innerHTML = "Please enter your resident country";
+        } 
+    }
+</script>
+      <footer>
+		<div class="wrapper">
+			<div id="footer-info">
+			<div id = "footer_1">
+			<div id = "email">
+				<i class="material-icons" style="font-size:36px; color:black">email</i>
+				<p>expressentryinfo@cic.gc.ca</p>
+			</div>
+			<div id = "phone">
+				<i class="material-icons" style="font-size:36px; color:black">phone</i>
+				<p>+1-416-123-1234</p>
+			</div>
+			<div id = "openhours">
+				<i class="material-icons" style="font-size:36px; color:black">home</i>
+				<p>Monday - Friday : 8 AM - 5 PM</p>
+			</div>
+			<p id = "footer_1_para2">
+				<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a href="#">Careers</a> I <a href="#">History</a>
+			</p>
+			</div>
+			<div id = "footer_2">
+			<br>
+			<p>Copyright © 2018 Government of Canada</p>
+			<img src="can_footer.jpg" id="" height="70"
+					width="270" alt="Logo">
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+    </body>
+</html>
+  
+  
+
+
