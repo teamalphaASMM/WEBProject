@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="eligibility.css">
+           <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>      
+     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">   
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>    
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+         <script src="eligibilityscript.js"></script>
+    </head>
+<body>
+<header>
+
+		<div class="wrapper">
+
+			<h1>
+
+				<img src="images/logo.jpg" id="" class="floatleft" height="120"
+
+					width="120" alt="Logo">
+
+				<div class="heading">
+
+					Government Of Canada<br> Gouvernement du Canada
+
+				</div>
+
+			</h1>
+
+			<br> <br> <br> <br>
+
+		</div>
+
+</header>
+<!-- header navigation-->
+
+<div class="headernavs">
+
+		<nav>
+
+			<ul>
+
+				<li class="tabs"><a href="#" onmouseover="myFunction()"
+
+					onmouseout="removeI()">Home</a>
+
+
+
+					<!--<div id="myDropdown" class="dropdown-content">
+
+						<a href="#home">Home</a> <a href="#about">About</a> <a
+
+							href="#contact">Contact</a>
+
+
+
+					</div>-->
+					</li>
+
+				<li class="tabs"><a href="#">Services</a> <i
+
+					class="fa fa-caret-down"></i></li>
+
+				<li class="tabs"><a href="#">Provinces</a></li>
+
+				<li class="tabs"><a href="#">Jobs</a></li>
+
+				<li class="tabs"><a href="#">Culture</a></li>
+
+				<li class="tabs"><a href="#" id = "about">About Job</a></li>
+
+				<li class="tabs"><a href="#">FAQs</a></li>
+
+				<li class="tabs"><a href="#" id = "about">Contact Us</a></li>
+
+			</ul>
+
+		</nav>
+
+	</div>
+
+
+  <div class="container">
+  <form class="modal-content" action="" name="eligibilitycheck" onsubmit="return(validateForm());">
+  
+      <h1>Eligibility Verification</h1>
+      <p>Please fill in this form to check if you are eligible to apply.</p>
+      
+      
+      
+      
+      <label for="province"><b>Please select a province</b></label>
+	  <br/>
+ <select name="province" id="province" required>
+  <option value="selProvince">Select a province</option>
+  <option value="AB">Alberta</option>
+	<option value="BC">British Columbia</option>
+	<option value="MB">Manitoba</option>
+	<option value="NB">New Brunswick</option>
+	<option value="NL">Newfoundland and Labrador</option>
+	<option value="NS">Nova Scotia</option>
+	<option value="ON">Ontario</option>
+	<option value="PE">Prince Edward Island</option>
+	<option value="QC">Quebec</option>
+	<option value="SK">Saskatchewan</option>
+	<option value="NT">Northwest Territories</option>
+	<option value="NU">Nunavut</option>
+	<option value="YT">Yukon</option>
+</select>
+<br/>
+      <label for="date"><b>Enter the date you took the test on</b></label>
+	  <br/>
+      <input type="text" id="datepicker" name="date" >
+      <br/>
+ <label for="speaking"><b>Enter your score in speaking</b></label>
+ <br/>
+ <select name="speaking" >
+ <option value="selSpeaking">Select a value</option>
+  <option value="6.5">6.5</option>
+        <option value="7.0">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8.0">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9.0">9.0</option>
+</select>
+<br/>
+  <label for="writing"><b>Enter your score in writing</b></label>
+  <br/>
+ <select name="writing" >
+ <option value="selWriting">Select a value</option>
+        <option value="7.0">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8.0">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9.0">9.0</option>
+ </select>
+ <br/>
+   <label for="reading"><b>Enter your score in reading</b></label>
+   <br/>
+ <select name="reading" >
+  <option value="selReading">Select a value</option>
+  <option value="6.5">6.5</option>
+        <option value="7.0">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8.0">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9.0">9.0</option>
+</select>
+<br/>
+    <label for="listening"><b>Enter your score in listening</b></label>
+	<br/>
+ <select name="listening" >
+  <option value="selListening">Select a value</option>
+  <option value="6.5">6.5</option>
+        <option value="7.0">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8.0">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9.0">9.0</option>
+</select>
+<br/>
+     <label for="skilledCanada"><b><p>In the last three years, how many years of skilled work experience do you have in Canada?</p><p> It must have been full-time (or an equal amount in part time).</p></b></label>
+	 <br/>
+ <select name="skilledCanada" required>
+   <option value="selSkilled">Select a value</option>
+   <option value="less than one year">less than one year</option>
+        <option value="one year or more">one year or more</option>
+</select>
+     
+     <br/>
+ <label for="totalSkilled"><b><p>In the last 10 years, how many years of skilled work experience do you have? It must</p><p> have been continuous, paid, full-time (or an equal amount in part-time), and in only one occupation.</p></b></label>
+ <br/>
+ <select name="totalSkilled" required>
+   <option value="selTotal">Select a value</option>
+  <option value="none">none</option>
+        <option value="less than one year">less than one year</option>
+        <option value="1year">1 year</option>
+        <option value="2-3 years">2-3 years</option>
+        <option value="4-5 years">4-5 years</option>
+        <option value="6 or more">6 or more</option>
+</select>
+     <br/>
+ <label for="jobOffer"><b>Do you have a valid job offer in Canada</b></label>
+ <br/>
+ <select name="jobOffer" required>
+   <option value="selJob">Select a value</option>
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+  
+</select>
+ 
+ <br/>
+  <label for="legal"><b>Are you currently working legally in Canada?</b></label>
+  <br/>
+ <select name="legal" required>
+   <option value="selLegal">Select a value</option>
+ <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+      <div class="clearfix">
+        
+        <input type="submit"  class="eligibilityBtn" value="Check Eligibility"/>
+      </div>
+  
+  </form>
+ 
+
+<footer>
+
+		<div class="wrapper">
+
+			<div id="footer-info">
+
+			<div id = "footer_1">
+
+			<div id = "email">
+
+				<i class="material-icons" style="font-size:36px; color:black">email</i>
+
+				<p>expressentryinfo@cic.gc.ca</p>
+
+			</div>
+
+			<div id = "phone">
+
+				<i class="material-icons" style="font-size:36px; color:black">phone</i>
+
+				<p>+1-416-123-1234</p>
+
+			</div>
+
+			<div id = "openhours">
+
+				<i class="material-icons" style="font-size:36px; color:black">home</i>
+
+				<p>Monday - Friday : 8 AM - 5 PM</p>
+
+			</div>
+
+			<p id = "footer_1_para2">
+
+				<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a href="#">Careers</a> I <a href="#">History</a>
+
+			</p>
+
+			</div>
+
+			<div id = "footer_2">
+
+			<br>
+
+			<p>Copyright © 2018 Government of Canada</p>
+
+			<img src="images/can_footer.jpg" id="" height="70"
+
+					width="270" alt="Logo">
+
+			</div>
+
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+	</footer>
+
+
+ </div>
+
+
+
+</body>
+</html>
