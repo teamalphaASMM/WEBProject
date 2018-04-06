@@ -2,6 +2,8 @@ body {
 	background-color: #fff;
 	color: #777;
 	font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	min-width:1440px; 
+	max-width: 1440px
 }
 
 p {
@@ -624,7 +626,7 @@ cursor: pointer;
 
 .next{
 
-margin-right:725px;
+margin-right:717px;
 border-radius: 0 3px 3px 0;
 
 }
