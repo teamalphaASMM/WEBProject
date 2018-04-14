@@ -338,7 +338,6 @@ footer {
 	margin: 10px 0;
 }
 
-/* Next & previous buttons */
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
@@ -353,13 +352,11 @@ footer {
 	border-radius: 0 3px 3px 0;
 }
 
-/* Position the "next button" to the right */
 .next {
-	right: 0;
+	margin-left: 290px;
 	border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 }
@@ -695,8 +692,6 @@ background-color: #333;
 #provinces {
 	margin-left: -3px;
 }
-
-
 
 #arrow-cursora,#arrow-cursorb {
 	margin-right: -30px;

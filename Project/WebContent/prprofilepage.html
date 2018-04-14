@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Create PR Application Profile</title>
+<link rel="stylesheet" type="text/css" href="css/prprofilepage.css">
+<link rel=icon href=images/mainico.ico>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<script src="js/prprofile.js"></script>
+	<header>
+		<div class="wrapper">
+			<h1>
+				<img src="images/logo.jpg" class="floatleft" height="120"
+					width="120" alt="Logo">
+				<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+				</div>
+			</h1>
+			<br> <br> <br> <br>
+		</div>
+	</header>
+	<div class="headernavs">
+		<nav>
+			<ul>
+				<li class="dropdown"><a href="#home">Home</a></li>
+				
+				<li class="dropdown"><a id = "services" href="#">Services
+				<i class="fa fa-caret-down" id = "arrow-cursora"></i></a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink1">Transport</a> 
+						<a href="#about" id="droplink2">Tourism</a> 
+						<a href="#" id="droplink3">Money</a> 
+						<a href="#" id="droplink4">Taxes</a>
+					</div></li>
+				<li class="dropdown"><a href="#">Jobs</a></li>
+				<li class="dropdown"><a href="#">Culture</a></li>
+				<li class="dropdown"><a id = "provinces" href="#">Provinces
+				<i class="fa fa-caret-down" id = "arrow-cursorb"></i></a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink5">Alberta</a> 
+						<a href="#about" id="droplink6">B.Columbia</a> 
+						<a href="#" id="droplink7">Ontario</a> 
+						<a href="#" id="droplink8">N.Brunswick</a>
+						<a href="#" id="droplink9">Manitoba</a>
+						<a href="#" id="droplink10">Quebec</a>
+						<a href="#" id="droplink11">Nova Scotia</a>
+					</div></li>
+				<li class="dropdown"><a href="#" class="about">About Jobs</a></li>
+				<li class="dropdown"><a href="#">FAQs</a></li>
+				<li class="dropdown"><a href="#" class="about">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	<br>
+	<br>
+	<div id = "loginuser">
+	</div>
+	<div id = "prform">
+		Provide the Permanent Residency Profile Details
+	</div>
+      <form action="index.html" method="post">
+        <fieldset>
+        <legend>Personal Details</legend>
+        <div id = "fnamediv">
+          <label for="fname" id = "fnamelabel">First Name:</label>
+          <input type="text" id="fname" name="fname" placeholder = " Amal" disabled>
+        </div>
+         <div id = "lnamediv">
+          <label for="lname" id = "lnamelabel">Last Name:</label>
+          <input type="text" id="lanem" name="lname" placeholder = " Mathew" disabled>
+        </div>
+        <div id = "emaildiv">
+          <label for="mail" id = "emaillabel">Email:</label>
+          <input type="email" id="email" name="email">
+        </div> 
+         <div id = "emailinvalid">
+          </div>
+        <div id = "dobdiv">
+          <label for="dob" id = "doblabel">Date Of Birth:</label>
+          <input type="date" id="dob" name="dob">
+        </div> 
+        <div id = "dobinvalid">
+          </div>
+        <div id = "dobdiv">
+          <label for="countryofcitizen" id = "coclabel">Country:</label>
+         <select name="country" id="coc" class = "dropdowns">
+                  </select>
+        </div> 
+        <div id = "cocinvalid">
+          </div>
+        <div id = "genderdiv">
+          <label for="gender" id = "genderlabel">Gender:</label>
+          <input type="radio" id="maleinp" name="counciti"><span id = "male">Male</span>
+          <input type="radio" id="femaleinp" name="counciti"><span id = "female">Female</span>
+        </div> 
+        <div id = "genderinvalid">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Educational Credential And Language Assessment</legend>
+          <div id = "edudiv">
+          <label for="eductation" id = "edulabel">Educational Credential:</label>
+          <select name="country" id="edu" class = "dropdowns">
+                  </select>
+        </div> 
+        <div id = "eduinvalid">
+          </div>
+        <div id = "ldatediv">
+          <label for="languagedate" id = "ldatelabel">Date Of Language Test:</label>
+          <input type="date" id="ldate" name="ldate">
+        </div> 
+        <div id = "ldateinvalid">
+          </div>
+        <div class = "ieltsdiv">
+          <label for="listening" class = "ieltslabel">Listening Score</label>
+          <select name="country" class="ielts" id ="lscore" id ="lscore" >
+                  </select>
+        </div>
+        <div id = "lscoreinvalid">
+          </div> 
+        <div class = "ieltsdiv">
+          <label for="reading" class = "ieltslabel">Reading Score</label>
+          <select name="country" class="ielts" id ="rscore">
+                  </select>
+        </div> 
+        <div id = "rscoreinvalid">
+          </div>
+        <div class = "ieltsdiv">
+          <label for="writing" class = "ieltslabel">Writing Score</label>
+          <select name="country" class="ielts" id ="wscore">
+                  </select>
+        </div> 
+        <div id = "wscoreinvalid">
+          </div>
+        <div class = "ieltsdiv">
+          <label for="speaking" class = "ieltslabel">Speaking Score</label>
+          <select name="country" class="ielts" id ="sscore" >
+                  </select>
+        </div> 
+        <div id = "sscoreinvalid">
+          </div>
+        </fieldset>
+         <fieldset>
+          <legend>Comphrehensive Score</legend>
+          <div id = "crsdiv">
+          <span id ="note">Note: Please click the Calculate Score button to get calculate final CRS score</span>
+          <span id ="note1">Please select appropriate IELTS scores to calculate the CRS score</span>
+          <label for="crs" id = "crslabel" >Calculated Score:</label>
+          <input type="text" id="crs" name="crs" readonly="true">
+          <button type="button" id ="calButton" 
+          class="calculatebutton">Calculate Score</button>
+        </div> 
+        <div id ="crsinvalid">
+        </div>
+        </fieldset>
+         <fieldset>
+          <legend>Additional Information</legend>
+          <div id = "edudiv">
+          <label for="eductation" id = "edulabel">Province to Reside:</label>
+          <input type="checkbox" id="Oninp" name="provinces"><span id = "On">Ontario</span>
+          <input type="checkbox" id="Quinp" name="provinces"><span id = "Qu">Quebec</span>
+          <input type="checkbox" id="Alinp" name="provinces"><span id = "Al">Alberta</span>
+          <input type="checkbox" id="Sainp" name="provinces"><span id = "Sa">Saskatewan</span>
+          <input type="checkbox" id="Mainp" name="provinces"><span id = "Ma">Manitoba</span>
+          <input type="checkbox" id="BCinp" name="provinces"><span id = "BC">British Columbia</span>
+        </div> 
+        <div id = "provinceinvalid">
+          </div>
+        <div id = "ldatediv">
+          <label for="languagedate" id = "ldatelabel">Date Of Language Test:</label>
+          <input type="date" id="ldate" name="ldate">
+        </div> 
+        </fieldset>
+      </form>
+      <div id = "btndiv">
+      <button type="button" onclick = "validateForm()" class = "submitbutton" id = "sbtn">Sign Up</button>
+       <button type="submit" onclick ="reset()" class = "resetbutton">Reset</button>
+       </div>
+       
+<div id="submitModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      Confirmation of Submission
+    </div>
+    <div class="modal-body">
+    The Profile submitted successfully
+    </div>
+    <div>
+     <button type="button" class = "submitbutton" id = "okbtn" onclick="location.href='upload.html'"><div id = "okchar">OK</div></button>
+    </div>
+  </div>
+</div>
+
+<div id="ieltsinvalidmodal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      Confirmation of Submission
+    </div>
+    <div class="modal-body">
+    Sorry! Your IELTS Score doesn't meet the minimum criteria.
+    Go back to profile and change if provided by mistake. 
+    </div>
+    <div>
+     <button type="button" class = "submitbutton" id = "okbtn-ielts"><div id = "okchar">OK</div></button>
+    </div>
+  </div>
+</div>
+
+	<footer>
+		<div class="wrapper">
+			<div id="footer-info">
+				<div id="footer_1">
+					<div id="email">
+						<i class="material-icons" style="font-size: 36px; color: black">email</i>
+						<p>expressentryinfo@cic.gc.ca</p>
+					</div>
+					<div id="phone">
+						<i class="material-icons" style="font-size: 36px; color: black">phone</i>
+						<p>+1-416-123-1234</p>
+					</div>
+					<div id="openhours">
+						<i class="material-icons" style="font-size: 36px; color: black">home</i>
+						<p>Monday - Friday : 8 AM - 5 PM</p>
+					</div>
+					<p id="footer_1_para2">
+						<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a
+							href="#">Careers</a> I <a href="#">History</a>
+					</p>
+				</div>
+				<div id="footer_2">
+					<br>
+					<p>Copyright © 2018 Government of Canada</p>
+					<img src="images/can_footer.jpg" height="70" width="270"
+						alt="Logo">
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Documents Upload</title>
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round'	rel='stylesheet' type='text/css'>
+	
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"	rel="stylesheet">
+      <link rel="stylesheet" href="css/upload2.css">
+<script type="text/javascript"  charset="UTF-8"></script></head>
+<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Documents Upload</title>
+        
+    </head>
+    <body>
+		<h1 id = "header">
+		<div id = "headerpic">
+			<img src="images/logo.jpg" id="" class="floatleft" height="120"	width="120" alt="">
+		</div>
+			<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+			</div>
+		</h1>
+		<h1 id = "pageheader">
+		Upload Your Documents Here:
+		</h1>
+		<div id = "uploadform">
+	 <form action="index.html" method="post">
+        <label for="file">Upload age proof:</label>
+          <input type="file" id="name" name="file" required><div style="color:red;" id="errormessage"></div>
+		   <br> <label for="file">Upload recommendation letter:</label>
+          <input type="file" id="name" name="file" required><br>
+		    <br><label for="file">Upload residency proof:</label>
+         <input type="file" id="name" name="file" required><br>
+		  <br>  <label for="file">Upload passport copy:</label>
+          <input type="file" id="name" name="file" required><br>
+		  <br>
+		  <label for="file">Upload IELTS trf:</label>
+          <input type="file" id="name" name="file" required>
+		  <label for="file">Upload Medical Documents:</label>
+          <input type="file" id="name" name="file" required>
+		  <label for="file">Upload Police Verification Documents:</label>
+          <input type="file" id="name" name="file" required>
+		  <label for="file">Upload Education Documents:</label>
+          <input type="file" id="name" name="file" required>
+		   <button type="submit" value="Done" onclick ="validate()">Done</button>
+      </form>
+	  </div>
+	  <script>
+    function validate(){
+       var name = document.getElementById('name').value;
+	     if(name == ""){
+            document.getElementById('errormessage').innerHTML = "Please upload the correct file";
+        } 
+    }
+</script>
+      <footer>
+		<div class="wrapper">
+			<div id="footer-info">
+			<div id = "footer_1">
+			<div id = "email">
+				<i class="material-icons" style="font-size:36px; color:black">email</i>
+				<p>expressentryinfo@cic.gc.ca</p>
+			</div>
+			<div id = "phone">
+				<i class="material-icons" style="font-size:36px; color:black">phone</i>
+				<p>+1-416-123-1234</p>
+			</div>
+			<div id = "openhours">
+				<i class="material-icons" style="font-size:36px; color:black">home</i>
+				<p>Monday - Friday : 8 AM - 5 PM</p>
+			</div>
+			<p id = "footer_1_para2">
+				<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a href="#">Careers</a> I <a href="#">History</a>
+			</p>
+			</div>
+			<div id = "footer_2">
+			<br>
+			<p>Copyright © 2018 Government of Canada</p>
+			<img src="images/can_footer.jpg" id="" height="70"
+					width="270" alt="Logo">
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+    </body>
+</html>
+  
+  
+
+

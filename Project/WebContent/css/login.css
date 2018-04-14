@@ -1,0 +1,544 @@
+body {font-family: Arial, Helvetica, sans-serif;
+       overflow: auto;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],select {
+    width:50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus,select {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+.eligibilityBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.eligibilityBtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.eligibilityBtn {
+  
+  width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+     display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* Enable scroll if needed */
+   /* background-color: #474e5d;*/
+    padding-top: 0px;
+  display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+   margin-top:210px;
+}
+
+
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+
+
+
+
+@media screen and (max-width: 300px) {
+    .eligibilityBtn {
+       width: 100%;
+    }
+}
+
+#email i {
+
+	margin-top:30px;
+
+}
+
+
+
+#phone i {
+
+	margin-top:30px;
+
+}
+
+
+
+#email, #phone {
+
+	font-style: italic;
+
+	font-weight: bold;
+
+}
+
+
+
+#email p {
+
+	margin-top: -35px;
+
+	padding-left: 222px;
+
+}
+
+
+
+#phone p {
+
+	margin-top: -35px;
+
+	padding-left: 222px;
+
+}
+
+
+
+#phone {
+
+	margin-top: -70px;
+
+	margin-left: 600px;
+
+	width: 400px;
+
+}
+
+
+
+#email {
+
+	margin-top: -50px;
+
+	margin-left: 100px;
+
+	width: 400px;
+
+}
+
+
+
+#openhours {
+
+	margin-top: -50px;
+
+	margin-left: 1000px;
+
+	width: 400px;
+
+}
+
+
+
+#openhours p {
+
+	margin-top: -30px;
+
+	width: 400px;
+
+padding-left:200px;
+
+	font-weight:bold;
+
+
+}
+
+footer {
+
+	padding: 60px 0;
+
+	background-color: white;
+
+}
+
+
+
+#footer-info img {
+
+	margin-left: 1100px;
+
+}
+
+
+
+#footer_1 {
+
+	background-color:#d5e7f3;
+
+	width: 1800px;
+
+	height: 180px;
+
+	margin-top: -69px;
+
+	margin-left:-250px;
+	
+    text-align: center;
+
+
+}
+
+
+
+#footer_1_para2 {
+
+	margin-top: 50px;
+
+	margin-left: 150px;
+   text-align:center;
+}
+
+
+
+#footer_1 a {
+
+	color:#1c5080;
+
+}
+
+
+
+#footer_1 a:hover {
+
+	color: #0f25f7;
+
+}
+
+
+
+#footer_2 {
+
+	border-top: 4px solid #1c5080;
+
+	background-color: white;
+
+	width: 1800px;
+
+	margin-left:-250px;
+
+	margin-top: -18px;
+
+	height: 100px;
+text-align:center;
+}
+
+
+
+#footer_2 p {
+
+	margin-left:150px;
+
+	font-weight:bold;
+
+	margin-top:30px;
+
+}
+
+
+
+#footer_2 img {
+
+	margin-top: -20px;
+
+}
+
+
+
+#footer_2 a {
+
+color:#1c5080;
+
+}
+
+
+
+
+
+#footer-info {
+
+	width: 380px;
+
+	float: left;
+
+	margin-top: 10px;
+
+	font-size:20px;
+
+	color:#1c5080;
+
+}
+
+
+
+#footer-links {
+
+	width: 520px;
+
+	float: right;
+
+}
+
+
+
+#footer-links ul {
+
+	width: 150px;
+
+	float: left;
+
+	margin-left: 20px;
+
+}
+
+
+
+#footer-links ul li {
+
+	margin: 10px 0;
+
+}
+
+
+header {
+
+	height: 120px;
+
+}
+
+
+
+header h1 {
+
+
+
+	margin-top: 32px;
+
+}
+.heading {
+
+	margin-top: -110px;
+
+	margin-left: 130px;
+
+	font-size: 30px;
+
+}
+
+.headernavs nav ul {
+
+	margin-bottom: 40px;
+
+	margin-top: -40px;
+
+	margin-left: 50px;
+
+}
+
+
+
+.headernavs nav ul li {
+
+	float: left;
+
+	display: inline-block;
+
+	margin-right: 10px;
+
+	padding-right: 123.7px;
+
+	border-right: 1px solid white;
+
+}
+
+
+
+.headernavs nav ul li a {
+
+	color: white;
+
+	text-transform: uppercase;
+
+	font-weight: bold;
+
+	display: block;
+
+	margin-left: 10px;
+
+	padding-left: 10px;
+
+}
+
+
+
+#about {
+
+	margin-top: -7px;
+
+}
+
+
+
+.headernavs nav ul li a:hover {
+
+	color: #ac201e;
+
+}
+
+
+
+.tabs {
+
+	padding-top: 20px;
+
+	margin-left: -73px;
+
+	padding-left: 20px;
+
+	background-color: #1c5080;
+
+	height: 40px;
+
+	width: 100px;
+
+	text-align: center;
+
+	padding-left: 2.4px;
+
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 450px;
+  padding: 24% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 150px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1c5080;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #1c5080;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #1c5080;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.login {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.login:before, .login:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.login .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.login .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.login .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.login .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.login .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  /*background: #76b852;  fallback for old browsers 
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  */    
+}
