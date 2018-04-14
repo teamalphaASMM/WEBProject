@@ -7,8 +7,8 @@
      <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">   
      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>    
 	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-         <script src="eligibilityscript.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/signin.js"></script>
     </head>
 <body>
 <header>
@@ -67,9 +67,9 @@
 
 				<li class="tabs"><a href="#">Culture</a></li>
 
-				<li class="tabs"><a href="#" id = "about">About Canada</a></li>
+				<li class="tabs"><a href="aboutcanda.html" id = "about">About Canada</a></li>
 
-				<li class="tabs"><a href="#">FAQs</a></li>
+				<li class="tabs"><a href="faqs.html">FAQs</a></li>
 
 				<li class="tabs"><a href="#" id = "about">Contact Us</a></li>
 
@@ -92,19 +92,14 @@
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
     <form class="login-form">
-      <input type="text" placeholder="username" id = "name"/>
+      <input type="text" placeholder="username" id = "name">
       <input type="password" placeholder="password"/>
-      <button>login</button>
+      <button type="button" onclick="validate()">login</button>
       <p class="message">Not registered? <a href="userreg.html">Create an account</a></p>
     </form>
   </div>
 </div>
 </div>	
-	
-	<script>
-		localstorage.setItem("loginusername",document.getElementById("name"));    
-	</script>
-	<!--footer-->
 	
 	<footer>
 

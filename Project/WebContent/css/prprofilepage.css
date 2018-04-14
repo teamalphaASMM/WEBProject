@@ -772,6 +772,15 @@ legend {
 	margin-left:50px;
 }
 
+#loginuser {
+	color: #1c5080;
+	font-size:25px;
+	font-weight: bold;
+	margin-top:70px;
+	margin-bottom:-30px;
+	margin-left:1100px;
+}
+
 footer {
 	padding: 60px 0;
 	background-color: white;

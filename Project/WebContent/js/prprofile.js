@@ -3,10 +3,12 @@ window.onload = function() {
 
 	if (typeof(Storage) !== "undefined") {
 	    // Retrieve
-	    document.getElementById("loginuser").innerHTML = localStorage.getItem("lastname");
+	    document.getElementById("loginuser").innerHTML = "Welcome "+localStorage.getItem("loginname");
 	} else {
 	    document.getElementById("loginuser").innerHTML = "Sorry, your browser does not support Web Storage...";
 	}
+	$('#fname').val(localStorage.getItem("loginname"));
+	$('#fname').css('color','#8f8d91');
 	var scores = [ 'Select', 'Less than 6.0', '6.0', '6.5', '7.0', '7.5',
 			'8.0', '8.5', '9.0' ];
 	var country = ['Select','Australia','Brazil','Bangladesh','Columbia','Denmark','Estonia','Fiji','Germany','Hungary','India','US'];
