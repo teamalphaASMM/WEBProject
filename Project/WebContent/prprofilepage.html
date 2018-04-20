@@ -4,11 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Create PR Application Profile</title>
 <link rel="stylesheet" type="text/css" href="css/prprofilepage.css">
+<link rel="stylesheet" type="text/css" href="css/infoicons.css">
+<link rel="stylesheet" type="text/css" href="css/headerfooter.css">
+<link rel="stylesheet" type="text/css" href="css/dialoguebox.css">
 <link rel=icon href=images/mainico.ico>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/loader.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -25,7 +30,7 @@
 			<br> <br> <br> <br>
 		</div>
 	</header>
-	<div class="headernavs">
+	<div class="headernavs" id = "myHeader">
 		<nav>
 			<ul>
 				<li class="dropdown"><a href="home.html">Home</a></li>
@@ -59,12 +64,20 @@
 	</div>
 	<br>
 	<br>
-	<div id = "loginuser">
+	<!-- <div id = "header"></div>
+	<div id = "myHeader"></div> -->
+	<div id = "loginuser" >
+	</div>
+	<div id = "signout_nav" onclick = "signOut()">
+	<i class="fa fa-sign-out" id = "signouticon" aria-hidden="true"></i>
+	<span id = "signoutname">SIGN OUT</span>
+	<div id = "signout">
+	</div>
 	</div>
 	<div id = "prform">
 		Provide the Permanent Residency Profile Details
 	</div>
-      <form action="index.html" method="post">
+      <form>
         <fieldset>
         <legend>Personal Details</legend>
         <div id = "fnamediv">
@@ -104,6 +117,9 @@
         </fieldset>
         <fieldset>
           <legend>Educational Credential And Language Assessment</legend>
+           <div id = "eduico" class = "eduinfo"><i class="fa fa-info-circle"></i>
+             <span class="edutext">Highest Education Credential Obtained.</span>
+           </div>
           <div id = "edudiv">
           <label for="eductation" id = "edulabel">Educational Credential:</label>
           <select name="country" id="edu" class = "dropdowns">
@@ -161,7 +177,10 @@
         </fieldset>
          <fieldset>
           <legend>Additional Information</legend>
-          <div id = "edudiv">
+          <div id = "prodiv">
+          <div id = "proico" class = "proinfo"><i class="fa fa-info-circle"></i>
+             <span class="protext">Preferred province to reside. Please select one or more.</span>
+           </div>
           <label for="eductation" id = "edulabel">Province to Reside:</label>
           <input type="checkbox" id="Oninp" name="provinces"><span id = "On">Ontario</span>
           <input type="checkbox" id="Quinp" name="provinces"><span id = "Qu">Quebec</span>
@@ -178,7 +197,10 @@
       <button type="button" onclick = "validateForm()" class = "submitbutton" id = "sbtn">Sign Up</button>
        <button type="submit" onclick ="reset()" class = "resetbutton">Reset</button>
        </div>
-       
+ 	<div class = "modal1">
+ 	<span class = "warningpr">Please wait while your application is Being submitted.Kindly don't reload or close the browser</span>
+      <div id="loader"></div>
+      </div>       
 <div id="submitModal" class="modal">
   <div class="modal-content">
     <div class="modal-header">

@@ -1,14 +1,22 @@
 window.onload = function() {
+	if (localStorage.getItem("loginuser") != null) {
+		
+		//$("#header").load("header.html"); 
+		//$("#myHeader").load("navtabs.html"); 
+		//$('footer').load("footer.html");
+		var navbar = document.getElementById("myHeader");
+		// Get the offset position of the navbar
+		var sticky = navbar.offsetTop;
 	
-
 	if (typeof(Storage) !== "undefined") {
 	    // Retrieve
-	    document.getElementById("loginuser").innerHTML = "Welcome "+localStorage.getItem("loginname");
-	} else {
-	    document.getElementById("loginuser").innerHTML = "Sorry, your browser does not support Web Storage...";
-	}
-	$('#fname').val(localStorage.getItem("loginname"));
+	    document.getElementById("loginuser").innerHTML = "Welcome "+localStorage.getItem(localStorage.getItem("loginuser")+"fname");
+	} 
+	$('#note').hide();
+	$('#fname').val(localStorage.getItem(localStorage.getItem("loginuser")+"fname"));
+	$('#lanem').val(localStorage.getItem(localStorage.getItem("loginuser")+"lname"));
 	$('#fname').css('color','#8f8d91');
+	$('#lanem').css('color','#8f8d91');
 	var scores = [ 'Select', 'Less than 6.0', '6.0', '6.5', '7.0', '7.5',
 			'8.0', '8.5', '9.0' ];
 	var country = ['Select','Australia','Brazil','Bangladesh','Columbia','Denmark','Estonia','Fiji','Germany','Hungary','India','US'];
@@ -20,7 +28,27 @@ window.onload = function() {
 	
 	populateCountry(country, 'coc');
 	populateCred(credentials, 'edu');
+	} else {
+		location.href = "signin.html";
+	}
 };
+
+window.onscroll = function() {myFunction()};
+
+
+//Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+	//Get the navbar
+	var navbar = document.getElementById("myHeader");
+
+	//Get the offset position of the navbar
+	var sticky = navbar.offsetTop;
+if (window.pageYOffset >= 128) {
+ navbar.classList.add("sticky")
+} else {
+ navbar.classList.remove("sticky");
+}
+}
 
 function populateScores(dropdowndata, id) {
 	var displayDrop = "";
@@ -49,11 +77,11 @@ function populateCred(dropdowndata, id) {
 }
 
 $(function() {
+
 	var l = 'n';
 	var r = 'n';
 	var w = 'n';
 	var s = 'n';
-	
 	$("#dob").change(function() {
 		if (!validateDob()) {
 			document.getElementById('dobinvalid').innerHTML = "*Please enter a valid date";
@@ -546,6 +574,36 @@ function validateForm () {
 	}
 	
 if (isFormValid) {
+	callLoad();
+}
+
+document.getElementById('emailinvalid').innerHTML = emaildMandatory;
+document.getElementById('dobinvalid').innerHTML = dobMandatory;
+document.getElementById('cocinvalid').innerHTML = countryMandatory;
+document.getElementById('lscoreinvalid').innerHTML = lScoreMandatory;
+document.getElementById('sscoreinvalid').innerHTML = sScoreMandatory;
+document.getElementById('wscoreinvalid').innerHTML = wScoreMandatory;
+document.getElementById('rscoreinvalid').innerHTML = rScoreMandatory;
+document.getElementById('ldateinvalid').innerHTML = lDateMandatory;
+document.getElementById('provinceinvalid').innerHTML = proMandatory;
+document.getElementById('genderinvalid').innerHTML = genderMandatory;
+document.getElementById('eduinvalid').innerHTML = credentialMandatory;
+document.getElementById('crsinvalid').innerHTML = crsScoreMandatory;
+}
+
+function callLoad() {
+	$('.modal1').show();
+	$('#loader').show();
+    myVar = setTimeout(showSuccess, 3000);
+    
+}
+
+function showSuccess() {
+
+
+	$('#loader').hide();
+	$('.modal1').hide();
+	
 	// Get the modal
 var modal = document.getElementById('submitModal');
 
@@ -571,20 +629,13 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+localStorage.setItem(localStorage.getItem("loginuser")+"status","Form Submitted");
+
 }
 
-document.getElementById('emailinvalid').innerHTML = emaildMandatory;
-document.getElementById('dobinvalid').innerHTML = dobMandatory;
-document.getElementById('cocinvalid').innerHTML = countryMandatory;
-document.getElementById('lscoreinvalid').innerHTML = lScoreMandatory;
-document.getElementById('sscoreinvalid').innerHTML = sScoreMandatory;
-document.getElementById('wscoreinvalid').innerHTML = wScoreMandatory;
-document.getElementById('rscoreinvalid').innerHTML = rScoreMandatory;
-document.getElementById('ldateinvalid').innerHTML = lDateMandatory;
-document.getElementById('provinceinvalid').innerHTML = proMandatory;
-document.getElementById('genderinvalid').innerHTML = genderMandatory;
-document.getElementById('eduinvalid').innerHTML = credentialMandatory;
-document.getElementById('crsinvalid').innerHTML = crsScoreMandatory;
+function signOut() {
+	location.href = 'signin.html';
+	localStorage.removeItem("loginuser");
 }
 
 

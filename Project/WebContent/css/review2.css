@@ -1,53 +1,60 @@
 
 body {
+
   font-family: 'Nunito', sans-serif;
+
   color: #384047;
 
-}
-#header {
-    font-family: 'Crete Round', serif;
-    font-weight: bold;
-    color: #444;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-form {
- margin-top:60px;
- padding-top:30px;
- margin-left:400px;
-  background: #f4f7f8;
-  border-radius: 8px;
-  padding-top:30px;
-  width: 800px;
-  font-size:26px;
+
+
 }
 
-#age,#rec,#ielts,#med,#rsp,#pass,#pol,#edu{
-	margin-left:40px;
+
+
+#header {
+
+    font-family: 'Crete Round', serif;
+
+    font-weight: bold;
+
+    color: #444;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
 }
-#agel,#recl,#ieltsl,#medl,#rspl,#passl,#poll,#edul{
-	margin-left:40px;
-	
+
+
+
+form {
+
+  max-width: 580px;
+
+  margin: 10px auto;
+
+  padding: 10px 20px;
+
+  background: #f4f7f8;
+
+  border-radius: 8px;
+
+}
+
+#fname,#lname,#age,#rec,#rsp,#med,#pass,#pol,#edu,#ielts{
+margin-right:40px;	
+width:540px;
+}
+#f1name,#l1name,#age1,#rec1,#rsp1,#med1,#pass1,#pol1,#edu1,#ielts1{
+margin-right:40px;	
+width:540px;
 }
 #done{
-	margin-left:550px;
+	margin-left:630px;
 	margin-top:20px;
-	width:200px;
+	width:300px;
 	text-align:center;
 	
-}
-#cancel{
-	margin-left:50px;
-	width:200px;
-	text-align:center;
-	background-color:red;
-}
-#errormessage,#error,#errorm,#errorme,#errorme,#errormes,#errormess,#errormessa,#errormessag{
-	font-size:20px;
-	margin-left:40px;
-}
-#uploadform{
-	margin-left:40px;
 }
 
 .headernavs nav ul {
@@ -129,90 +136,249 @@ form {
 	padding-left: 2.4px;
 
 }
+#h1div {
+
+  background-color:#1d6683;
+
+  color:white;
+
+  height:60px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+#formheader {
+
+  margin: 5px 0 30px 0;
+
+  padding-top:15px;
+
+  text-align: center;
+
+  
+
+}
+
+
+
+input[type="text"],
+
+input[type="password"],
+
+input[type="date"],
+
+input[type="datetime"],
+
+input[type="email"],
+
+input[type="number"],
+
+input[type="search"],
+
+input[type="tel"],
+
+input[type="time"],
+
+input[type="url"],
+
+textarea,
+
 select {
+
   background: rgba(255,255,255,0.1);
+
   border: none;
-  font-size: 26px;
+
+  font-size: 16px;
+
   height: auto;
+
   margin: 0;
+
   outline: 0;
+
   padding: 15px;
+
   width: 100%;
+
   background-color: #e8eeef;
+
   color: #8a97a0;
+
+  
+
   margin-bottom: 30px;
 
 }
+
+
+
 input[type="radio"],
+
 input[type="checkbox"] {
+
   margin: 0 4px 8px 0;
+
 }
+
+
+
 select {
+
   padding: 6px;
+
   height: 32px;
+
   border-radius: 2px;
+
 }
+
+
+
 button {
+
   padding: 19px 39px 18px 39px;
+
   color: #FFF;
+
   background-color: #1d6683;
+
   font-size: 18px;
+
   text-align: center;
+
   font-style: normal;
+
   border-radius: 5px;
+
   width: 100%;
+
   border: 1px solid #1d6683;
+
   border-width: 1px 1px 3px;
+
   box-shadow: 0 -1px 0 #1d6683 inset;
+
   margin-bottom: 10px;
+
 }
+
+
+
 fieldset {
+
   margin-bottom: 30px;
+
   border: none;
+
 }
+
+
+
 legend {
+
   font-size: 1.4em;
+
   margin-bottom: 10px;
+
 }
+
+
+
 label {
+
   display: block;
+
   margin-bottom: 8px;
+
 }
+
+
+
 label.light {
+
   font-weight: 300;
+
   display: inline;
+
 }
+
+
+
 .number {
+
   background-color: #1d6683;
+
   color: #fff;
+
   height: 30px;
+
   width: 30px;
+
   display: inline-block;
+
   font-size: 0.8em;
+
   margin-right: 4px;
+
   line-height: 30px;
+
   text-align: center;
+
   text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+
   border-radius: 100%;
+
 }
+
+
+
 .heading {
+
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
 	margin-top:-103px;
+
 	margin-left: 150px;
+
 	font-size : 30px;
+
 }
+
 .floatleft {
+
 	margin-top:-30px;
+
 	margin-left: 30px;
+
 	padding-top:-10px;
+
+	
+
 }
+
+
+
 #pageheader {
+
 	margin-top:30px;
+
 	text-align: center;
+
 	margin-left:300px;
+
 	margin-right:300px;
+
 	 border-bottom: 2px solid #a2251e;
+
+	
+
 }
+
+
 #email i {
 	margin-top:30px;
 }

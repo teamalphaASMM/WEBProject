@@ -37,15 +37,18 @@
 		<h1 id = "pageheader">
 		Provide your details to create the account.
 		</h1>
-      <form action="index.html" method="post">
+      <form>
       
       <div id = "h1div">
         <h1 id = "formheader">User Registration</h1>
        </div>
         <fieldset>
           <legend>Your basic info</legend>
-          <label for="name">Name:</label>
+          <label for="name">First Name:</label>
           <input type="text" id="name" name="user_name" required><div style="color:red;" id="errormessage"></div>
+          
+          <label for="name">Last Name:</label>
+          <input type="text" id="lname" name="user_name" required><div style="color:red;" id="errormessage"></div>
           
           <label for="mail">Email:</label>
           <input type="email" id="mail" name="user_email" required><div style="color:red;" id="ermessage"></div>
@@ -72,23 +75,39 @@
           <label for="bio">Biography:</label>
           <textarea id="bio" name="user_bio"></textarea>
         </fieldset>
-        <button type="submit" onclick ="validate()">Sign Up</button>
+        <button type="button" onclick ="validate()">Sign Up</button>
       </form>
 	  
 	  <script>
     function validate(){
+    	var formValid = true;
        var name = document.getElementById('name').value;
 	     if(name == ""){
             document.getElementById('errormessage').innerHTML = "Please enter your name";
+            formValid = false;
         } 
        var mail = document.getElementById('mail').value; 
 	   if (mail == ""){
 	       document.getElementById('ermessage').innerHTML = "Please enter your Email";
+	       formValid = false;
          }
 	   var country = document.getElementById('country').value;
 		  if(country == ""){
             document.getElementById('errmessage').innerHTML = "Please enter your resident country";
+            formValid = false;
         } 
+		  if (formValid) {
+			  
+		  localStorage.setItem(document.getElementById('username').value+"uname"
+				  ,document.getElementById('username').value);
+		  localStorage.setItem(document.getElementById('username').value+"pwd"
+				  ,document.getElementById('password').value);
+		  localStorage.setItem(document.getElementById('username').value+"fname"
+				  ,document.getElementById('name').value);
+		  localStorage.setItem(document.getElementById('username').value+"lname"
+				  ,document.getElementById('lname').value);
+		  location.href='signin.html';
+		  }
 		  
     }
 </script>

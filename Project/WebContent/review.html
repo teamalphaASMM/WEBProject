@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Documents </title>
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round'	rel='stylesheet' type='text/css'>
+	
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"	rel="stylesheet">
+      <link rel="stylesheet" href="css/review2.css">
+<script type="text/javascript"  charset="UTF-8"></script></head>
+<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Documents Review</title>
+        
+    </head>
+    <body>
+		<h1 id = "header">
+		<div id = "headerpic">
+			<img src="logo.jpg" id="" class="floatleft" height="120"	width="120" alt="">
+		</div>
+			<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+			</div>
+		</h1>
+		
+		<div class="headernavs">
+
+
+
+		<nav>
+
+			<ul>
+
+
+
+				<li class="tabs"><a href="home.html">Home</a>
+
+					</li>
+
+
+
+				<li class="tabs"><a href="#">Services</a> <i
+
+
+
+					class="fa fa-caret-down"></i></li>
+
+
+
+				<li class="tabs"><a href="#">Provinces</a></li>
+
+
+
+				<li class="tabs"><a href="#">Jobs</a></li>
+
+
+
+				<li class="tabs"><a href="#">Culture</a></li>
+
+
+
+				<li class="tabs"><a href="#" id = "about">About Job</a></li>
+
+
+
+				<li class="tabs"><a href="faqs.html">FAQs</a></li>
+
+
+
+				<li class="tabs"><a href="#" id = "about">Contact Us</a></li>
+
+
+
+			</ul>
+
+
+
+		</nav>
+
+
+
+	</div>
+	 <h1 id = "pageheader">
+		Review Your Documents Here:
+		</h1>
+		<div id = "uploadform">
+	 <form action="index.html" method="post">
+        <label for="file" id="fname" disabled>First Name:</label><br>
+          <input type="text" id="f1name" name="user_name" disabled>
+		    <label for="file" id="lname" disabled>Last Name:</label><br>
+			<input type="text" id="l1name" name="user_name" disabled>
+			<label for="file" id="agel">Age proof:</label>
+          <input type="text" id="age1" name="age" disabled>
+		   <br> <label for="file" id="recl">Recommendation letter:</label>
+          <input type="text" id="rec1" name="rec" disabled>
+		    <br><label for="filel" id="rspl">Residency proof:</label>
+         <input type="text" id="rsp1" name="rsp" disabled>
+		  <br>  <label for="file" id="passl">Passport copy:</label>
+          <input type="text" id="pass1" name="pass" disabled>
+		  <br>
+		  <label for="file" id="ieltsl">IELTS trf:</label>
+          <input type="text" id="ielts1" name="ielts" disabled>
+		  <br><br><label for="file" id="medl"> Medical Documents:</label>
+          <input type="text" id="med1" name="med" disabled>
+		 <br><br> <label for="file" id="poll"> Police Verification Documents:</label>
+          <input type="text" id="pol1" name="pol" disabled>
+		 <br><br> <label for="file" id="edu"> Education Documents:</label>
+          <input type="text" id="edu1" name="edu" disabled>
+          
+      </form>
+	  <button type="button" id="done" value="Done" onclick ="validate()">Load Documents</button>
+	   <script>
+	   window.onload = function validate(){
+	   
+		    var loginuser = localStorage.getItem("loginuser");
+		    var f1name = localStorage.getItem(loginuser+"fname");
+			   
+			     if(f1name == ""){
+		            document.getElementById('f1name').value = "Manraj";
+		        } else {
+		        	document.getElementById("f1name").value = f1name;
+		        }
+				 var l1name = localStorage.getItem(loginuser+"lname");
+			   
+			     if(l1name == ""){
+		            document.getElementById('l1name').value = "Sandhu";
+		        } else {
+		        	document.getElementById("l1name").value = localStorage.getItem(loginuser+"lname");
+		        }
+				 var age1 = localStorage.getItem(loginuser+"agedoc");
+			   
+			     if(age1 == ""){
+		            document.getElementById('age1').value = "Birth certificate.doc";
+		        } else {
+		        	document.getElementById("age1").value = localStorage.getItem(loginuser+"agedoc");
+		        }
+				 var rec1 = localStorage.getItem(loginuser+"recdoc");
+			   
+			     if(rec1 == ""){
+		            document.getElementById('rec1').value = "Recommendation.doc";
+		        } else {
+		        	document.getElementById("rec1").value = localStorage.getItem(loginuser+"recdoc");
+		        }
+				 var rsp1 = localStorage.getItem(loginuser+"rspdoc");
+			   
+			     if(rsp1 == ""){
+		            document.getElementById('rsp1').value = "Residency.doc";
+		        } else {
+		        	document.getElementById("rsp1").value = localStorage.getItem(loginuser+"rspdoc");
+		        }
+				 var pass1 =localStorage.getItem(loginuser+"passdoc");
+			   
+			     if(pass1 == ""){
+		            document.getElementById('pass1').value = "Passport.doc";
+		        } else {
+		        	document.getElementById("pass1").value = localStorage.getItem(loginuser+"passdoc");
+		        }
+				 var ielts1 = localStorage.getItem(loginuser+"ieltsdoc");
+			   
+			     if(ielts1 == ""){
+		            document.getElementById('ielts1').value = "IELTStrf.doc";
+		        } else {
+		        	document.getElementById("ielts1").value = localStorage.getItem(loginuser+"passdoc");
+		        }
+				 var med1 = localStorage.getItem(loginuser+"meddoc");
+			   
+			     if(med1 == ""){
+		            document.getElementById('med1').value = "Medical.doc";
+		        } else {
+		        	document.getElementById("med1").value = localStorage.getItem(loginuser+"meddoc");
+		        }
+				 var pol1 = localStorage.getItem(loginuser+"poldoc");
+			   
+			     if(pol1 == ""){
+		            document.getElementById('pol1').value = "Verfication.doc";
+		        }else {
+		        	document.getElementById("pol1").value = localStorage.getItem(loginuser+"poldoc");
+		        }
+				 var edu1 = localStorage.getItem(loginuser+"edudoc");;
+			   
+			     if(edu1 == ""){
+		            document.getElementById('edu1').value = "Educational.doc";
+		        }else {
+		        	document.getElementById("edu1").value = localStorage.getItem(loginuser+"edudoc");
+		        }
+		}
+		
+</script>
+      <footer>
+		<div class="wrapper">
+			<div id="footer-info">
+			<div id = "footer_1">
+			<div id = "email">
+				<i class="material-icons" style="font-size:36px; color:black">email</i>
+				<p>expressentryinfo@cic.gc.ca</p>
+			</div>
+			<div id = "phone">
+				<i class="material-icons" style="font-size:36px; color:black">phone</i>
+				<p>+1-416-123-1234</p>
+			</div>
+			<div id = "openhours">
+				<i class="material-icons" style="font-size:36px; color:black">home</i>
+				<p>Monday - Friday : 8 AM - 5 PM</p>
+			</div>
+			<p id = "footer_1_para2">
+				<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a href="#">Careers</a> I <a href="#">History</a>
+			</p>
+			</div>
+			<div id = "footer_2">
+			<br>
+			<p>Copyright © 2018 Government of Canada</p>
+			<img src="can_footer.jpg" id="" height="70"
+					width="270" alt="Logo">
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+    </body>
+</html>
+  
+  
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Payment Page</title>
+<link rel="stylesheet" type="text/css" href="css/paymentpage.css">
+<link rel="stylesheet" type="text/css" href="css/loader.css">
+<link rel="stylesheet" type="text/css" href="css/headerfooter.css">
+<link rel="stylesheet" type="text/css" href="css/dialoguebox.css">
+<link rel=icon href=images/mainico.ico>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<script src="js/payment.js"></script>
+	<header>
+		<div class="wrapper">
+			<h1>
+				<img src="images/logo.jpg" class="floatleft" height="120"
+					width="120" alt="Logo">
+				<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+				</div>
+			</h1>
+			<br> <br> <br> <br>
+		</div>
+	</header>
+	<div class="headernavs" id = "myHeader">
+		<nav>
+			<ul>
+				<li class="dropdown"><a href="home.html">Home</a></li>
+				
+				<li class="dropdown"><a id = "services" href="#">Services
+				<i class="fa fa-caret-down" id = "arrow-cursora"></i></a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink1">Transport</a> 
+						<a href="#about" id="droplink2">Tourism</a> 
+						<a href="#" id="droplink3">Money</a> 
+						<a href="#" id="droplink4">Taxes</a>
+					</div></li>
+				<li class="dropdown"><a href="#">Jobs</a></li>
+				<li class="dropdown"><a href="#">Culture</a></li>
+				<li class="dropdown"><a id = "provinces" href="#">Provinces
+				<i class="fa fa-caret-down" id = "arrow-cursorb"></i></a> 
+					<div class="dropdown-content">
+						<a href="#" id="droplink5">Alberta</a> 
+						<a href="#about" id="droplink6">B.Columbia</a> 
+						<a href="#" id="droplink7">Ontario</a> 
+						<a href="#" id="droplink8">N.Brunswick</a>
+						<a href="#" id="droplink9">Manitoba</a>
+						<a href="#" id="droplink10">Quebec</a>
+						<a href="#" id="droplink11">Nova Scotia</a>
+					</div></li>
+				<li class="dropdown"><a href="#" class="about">About Jobs</a></li>
+				<li class="dropdown"><a href="faqs.html">FAQs</a></li>
+				<li class="dropdown"><a href="#" class="about">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	<br>
+	<br>
+	<div id = "loginuser" >
+	</div>
+	<div id = "signout_nav" onclick = "signOut()">
+	<i class="fa fa-sign-out" id = "signouticon" aria-hidden="true"></i>
+	<span id = "signoutname">SIGN OUT</span>
+	<div id = "signout">
+	</div>
+	</div>
+	<div id = "prform">
+		Application Fee Payment
+	</div>
+      <form id = "paymentmodes">
+        <fieldset>
+        <legend>Payment Mode</legend>
+        <div id = "onlinediv">
+          <button type="button" onclick = "regulateOnline()" class = "paybuttons" id = "obtn">
+           <span id = "oico"><i class="fa fa-globe"></i></span>Online Banking
+          </button>
+        </div>
+         <div id = "carddiv">
+         <button type="button" onclick = "regulateCard()" class = "paybuttons" id = "cbtn">
+         <span id = "cico"><i class="fa fa-credit-card"></i></span>
+         <span id = "debittext">Debit/Credit Card</span></button>
+        </div>
+        <div id = "paypaldiv">
+          <button type="button" onclick = "regulatePayPal()" class = "paybuttons" id = "pbtn">
+           <span id = "pico"><i class="fa fa-paypal"></i></span>Pay Pal</button>
+        </div> 
+        <div id = "googlediv">
+         <button type="button" onclick = "regulateWallet()" class = "paybuttons" id = "gbtn"> 
+          <span id = "gico"><i class="fa fa-google-wallet" aria-hidden="true"></i></span>
+         <span id = "gbtn">Google Wallet</span></button>
+        </div> 
+        </fieldset>
+      </form>
+      <div id = "btndiv">
+      <button type="button" onclick = "validateForm()" class = "submitbutton" id = "sbtn">Pay Now</button>
+      <button type="button" onclick ="cancel()" class = "resetbutton">Cancel</button>
+      </div>
+      <div class = "modal1">
+       	<span class = "warning">Please wait while the payment is being processed.</span>
+      <div id="loader"></div>
+      </div>
+       
+      <div id = "cardDetails">
+        	 <div id = "cardform">
+          	<form>
+          	<label id = "cardlabel">Card Number</label>
+        		<input id="cardnum" type=text name="userlabel"  placeholder="Card Number">
+        		<div id = "cardinvalid">
+         	 </div>
+        		<label id = "acclabel">Account Holder Name</label>
+       		<input id="holdname" type="text" name="name"  maxlength="50" placeholder="Account Holder">
+       		<div id = "holderinvalid">
+         	 </div>
+        <label id = "exp">Expiration Date</label>
+        <label id = "cvv">CVV</label>
+        <div id = "expwrap">
+        <div id = "monthdiv">
+            <select name="month" id="month" onchange="" size="1">
+            </select>
+          </div>
+        <div id = "slash"><p>/</p></div>
+        <div id = "yeardiv">
+            <select name="year" id="year" onchange="" size="1">
+            </select>
+            </div>
+            </div>
+            <div id = "cvvwrap">
+        <div id = "cvvdiv">
+        <input id="cvvinp" type="password" name="cvv" placeholder="CVV" maxlength = "3">
+         <div id = "cvvinvalid">
+         	 </div>
+         	 <div id = "dateinvalid">
+         	 </div>
+          </div>
+            </div>
+            <br>
+            <div id = "captchaGenCard">
+       		</div>
+       		<div id = "captchalabel" >
+       		<label>Verify the below captcha</label>
+       		</div>
+       		<input id="captchainp1" type="text" name="name"  maxlength="50" placeholder="Captcha">
+       		<div id = "captchainvalid1">
+         	 </div>
+       		<button id = "refreshbtn" style="font-size:24px" onclick = "return generateCaptchaCard()"><i class="fa fa-refresh"></i></button>
+          	</form>
+        	  </div>
+        </div>
+        
+         <div id = "onlineDetails">
+        	  <div id = "onlinediv">
+        	  <div id = "scotiaicon">
+          <input type="radio" id="scotiainp" name="bank"><span id = "scotiaid"><img src = "images/scotia_logo.jpeg" height="70" width="200" ></span>
+          </div>
+            <div id = "tdicon">
+          <input type="radio" id="tdinp" name="bank"><span id = "tdid"><img src = "images/td_logo.png" height="70" width="200" ></span>
+        	  </div> 
+        	  <div id = "rbcicon">
+          <input type="radio" id="rbcinp" name="bank"><span id = "rbcid"><img src = "images/rbc_logo.jpeg" height="70" width="200" ></span>
+        	  </div>
+        	  <span class = "onlinemessage">Please Select your bank to proceed.</span>
+        	  <div id = "onlineform">
+          	<form>
+          	<label id = "userlabel">User Name/Account Key</label>
+        		<input id="username" type=text name="userlabel"  placeholder="User Name">
+        		<div id = "userinvalid">
+         	 </div>
+         	 <div id = "userinvalid">
+         	 </div>
+        		<label id = "pwdlabel">Password</label>
+       		<input id="password" type="password" name="name"  maxlength="50" placeholder="Password">
+       		<div id = "pwdinvalid">
+          	</div>
+       		<div id = "captchaGen">
+       		</div>
+       		<div id = "captchalabel" >
+       		<label>Verify the below captcha</label>
+       		</div>
+       		<input id="captchainp" type="text" name="name"  maxlength="50" placeholder="Captcha">
+       		<button id = "refreshbtn" style="font-size:24px" onclick = "return generateCaptcha()"><i class="fa fa-refresh"></i></button>
+          	<div id = "captchainvalid">
+          	</div>
+          	</form>
+        	  </div>
+        	  </div>
+        </div>
+        
+<div id="submitModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      Confirmation of Submission
+    </div>
+    <div class="modal-body">
+    The Payment made successfully. 
+    </div>
+    <div>
+     <button type="button" class = "submitbutton" id = "okbtn" onclick="location.href='user-pr-page.html'"><div id = "okchar">OK</div></button>
+    </div>
+  </div>
+</div>
+
+
+	<footer>
+		<div class="wrapper">
+			<div id="footer-info">
+				<div id="footer_1">
+					<div id="email">
+						<i class="material-icons" style="font-size: 36px; color: black">email</i>
+						<p>expressentryinfo@cic.gc.ca</p>
+					</div>
+					<div id="phone">
+						<i class="material-icons" style="font-size: 36px; color: black">phone</i>
+						<p>+1-416-123-1234</p>
+					</div>
+					<div id="openhours">
+						<i class="material-icons" style="font-size: 36px; color: black">home</i>
+						<p>Monday - Friday : 8 AM - 5 PM</p>
+					</div>
+					<p id="footer_1_para2">
+						<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a
+							href="#">Careers</a> I <a href="#">History</a>
+					</p>
+				</div>
+				<div id="footer_2">
+					<br>
+					<p>Copyright © 2018 Government of Canada</p>
+					<img src="images/can_footer.jpg" height="70" width="270"
+						alt="Logo">
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+</body>
+</html>

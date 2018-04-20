@@ -9,7 +9,6 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"	rel="stylesheet">
       <link rel="stylesheet" href="css/upload2.css">
-      <link rel=icon href=images/mainico.ico>
 <script type="text/javascript"  charset="UTF-8"></script></head>
 <body>
     <head>
@@ -26,38 +25,196 @@
 					Government Of Canada<br> Gouvernement du Canada
 			</div>
 		</h1>
+		<div class="headernavs">
+
+
+
+		<nav>
+
+			<ul>
+
+
+
+				<li class="tabs"><a href="home.html">Home</a>
+
+					</li>
+
+
+
+				<li class="tabs"><a href="#">Services</a> <i
+
+
+
+					class="fa fa-caret-down"></i></li>
+
+
+
+				<li class="tabs"><a href="#">Provinces</a></li>
+
+
+
+				<li class="tabs"><a href="#">Jobs</a></li>
+
+
+
+				<li class="tabs"><a href="#">Culture</a></li>
+
+
+
+				<li class="tabs"><a href="#" id = "about">About Job</a></li>
+
+
+
+				<li class="tabs"><a href="faqs.html">FAQs</a></li>
+
+
+
+				<li class="tabs"><a href="#" id = "about">Contact Us</a></li>
+
+
+
+			</ul>
+
+
+
+		</nav>
+
+
+
+	</div>
 		<h1 id = "pageheader">
 		Upload Your Documents Here:
 		</h1>
+		
 		<div id = "uploadform">
 	 <form action="index.html" method="post">
-        <label for="file">Upload age proof:</label>
-          <input type="file" id="name" name="file" required><div style="color:red;" id="errormessage"></div>
-		   <br> <label for="file">Upload recommendation letter:</label>
-          <input type="file" id="name" name="file" required><br>
-		    <br><label for="file">Upload residency proof:</label>
-         <input type="file" id="name" name="file" required><br>
-		  <br>  <label for="file">Upload passport copy:</label>
-          <input type="file" id="name" name="file" required><br>
+        <label for="file" id="agel">Upload age proof:</label>
+          <input type="file" id="age" name="file" required><div style="color:red;" id="errormessage"></div>
+		   <br> <label for="file" id="recl">Upload recommendation letter:</label>
+          <input type="file" id="rec" name="file" required><div style="color:red;" id="error"></div><br>
+		    <br><label for="filel" id="rspl">Upload residency proof:</label>
+         <input type="file" id="rsp" name="file" required><div style="color:red;" id="errorm"></div><br>
+		  <br>  <label for="file" id="passl">Upload passport copy:</label>
+          <input type="file" id="pass" name="file" required><div style="color:red;" id="errorme"></div><br>
 		  <br>
-		  <label for="file">Upload IELTS trf:</label>
-          <input type="file" id="name" name="file" required>
-		  <label for="file">Upload Medical Documents:</label>
-          <input type="file" id="name" name="file" required>
-		  <label for="file">Upload Police Verification Documents:</label>
-          <input type="file" id="name" name="file" required>
-		  <label for="file">Upload Education Documents:</label>
-          <input type="file" id="name" name="file" required>
-		   <button type="submit" value="Done" onclick ="validate()">Done</button>
+		  <label for="file" id="ieltsl">Upload IELTS trf:</label>
+          <input type="file" id="ielts" name="file" required><div style="color:red;" id="errormes"></div>
+		  <br><br><label for="file" id="medl">Upload Medical Documents:</label>
+          <input type="file" id="med" name="file" required><div style="color:red;" id="errormess"></div>
+		 <br><br> <label for="file" id="poll">Upload Police Verification Documents:</label>
+          <input type="file" id="pol" name="file" required><div style="color:red;" id="errormessa"></div>
+		 <br><br> <label for="file" id="edul">Upload Education Documents:</label>
+          <input type="file" id="edu" name="file" required><div style="color:red;" id="errormessag"></div>
+		   
       </form>
+	   <button type="button" id="done" value="Done" onclick ="validate()">Done</button>
+	   <button type="button" id="cancel" value="Done" onclick ="cancel()">Cancel</button>
 	  </div>
 	  <script>
-    function validate(){
-       var name = document.getElementById('name').value;
-	     if(name == ""){
-            document.getElementById('errormessage').innerHTML = "Please upload the correct file";
-        } 
-    }
+	  window.onload = function() {
+			
+			if (localStorage.getItem("loginuser") != null) {
+			
+			if (typeof(Storage) !== "undefined") {
+			} 
+			} else {
+				location.href = "signin.html";
+			} 
+		};
+		function validate(){
+			 var isUploadValid = true;
+		       var age = document.getElementById('age').value;
+			   
+			     if(age == ""){
+		            document.getElementById('errormessage').innerHTML = "*Please upload the correct file";
+		            isUploadValid = false;
+		        } else{
+				
+				 document.getElementById('errormessage').innerHTML = "";
+				  var filePathage = document.getElementById('age').value;    
+			    var fileNameage = filePathage.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"agedoc",fileNameage);
+				}
+			   
+			    
+				var rec = document.getElementById('rec').value;
+			     if(rec == ""){
+		            document.getElementById('error').innerHTML = "*Please upload the correct file";
+		            isUploadValid = false;
+		        }else{
+				 document.getElementById('error').innerHTML = "";
+				 var filePathrec = document.getElementById('rec').value;    
+			    var fileNamerec = filePathrec.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"recdoc",fileNamerec);
+				}
+				
+				var rsp = document.getElementById('rsp').value;
+			     if(rsp == ""){
+			    	 isUploadValid = false;
+		            document.getElementById('errorm').innerHTML = "*Please upload the correct file";
+		        }else{
+				 document.getElementById('errorm').innerHTML = "";
+				 var filePathrsp = document.getElementById('rsp').value;    
+			    var fileNamersp = filePathrsp.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"rspdoc",fileNamersp);
+				}
+				var pass = document.getElementById('pass').value;
+			     if(pass == ""){
+			    	 isUploadValid = false;
+		            document.getElementById('errorme').innerHTML = "*Please upload the correct file";
+		        }else{
+				 document.getElementById('errorme').innerHTML = "";
+				 var filePathpass = document.getElementById('pass').value;    
+			    var fileNamepass = filePathpass.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"passdoc",fileNamepass);
+				}
+				var ielts = document.getElementById('ielts').value;
+			     if(ielts == ""){
+		            document.getElementById('errormes').innerHTML = "*Please upload the correct file";
+		            isUploadValid = false;
+		        }else{
+				 document.getElementById('errormes').innerHTML = "";
+				 var filePathielts = document.getElementById('ielts').value;    
+			    var fileNameielts = filePathielts.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"ieltsdoc",fileNameielts);
+				}
+				var med = document.getElementById('med').value;
+			     if(med == ""){
+			    	 isUploadValid = false;
+		            document.getElementById('errormess').innerHTML = "*Please upload the correct file";
+		        }else{
+				 document.getElementById('errormess').innerHTML = "";
+				 var filePathmed = document.getElementById('med').value;    
+			    var fileNamemed = filePathmed.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"meddoc",fileNamemed);
+				}
+				var pol = document.getElementById('pol').value;
+			     if(pol == ""){
+			    	 isUploadValid = false;
+		            document.getElementById('errormessa').innerHTML = "*Please upload the correct file";
+		        }else{
+				 document.getElementById('errormessa').innerHTML = "";
+				 var filePathpol = document.getElementById('pol').value;    
+			    var fileNamepol = filePathpol.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"poldoc",fileNamepol);
+				}
+				var edu = document.getElementById('edu').value;
+			     if(edu == ""){
+			    	 isUploadValid = false;
+		            document.getElementById('errormessag').innerHTML = "*Please upload the correct file";
+		        }else{
+				 document.getElementById('errormessag').innerHTML = "";
+				 var filePathedu = document.getElementById('edu').value;    
+			    var fileNameedu = filePathedu.replace(/^.*[\\\/]/, ''); 
+				localStorage.setItem(localStorage.getItem("loginuser")+"edudoc",fileNameedu);
+				}
+			     
+			     if (isUploadValid) {
+			    	 localStorage.removeItem(localStorage.getItem("loginuser")+"status");
+			    	 localStorage.setItem(localStorage.getItem("loginuser")+"status","Documents Submitted");
+			    	 location.href='paymentpage.html'
+			     }
+		    }
 </script>
       <footer>
 		<div class="wrapper">
@@ -82,7 +239,7 @@
 			<div id = "footer_2">
 			<br>
 			<p>Copyright © 2018 Government of Canada</p>
-			<img src="images/can_footer.jpg" id="" height="70"
+			<img src="can_footer.jpg" id="" height="70"
 					width="270" alt="Logo">
 			</div>
 			</div>

@@ -1,0 +1,320 @@
+.wrapper {
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 940px;
+}
+
+.floatleft {
+	margin-top: -40px;
+	margin-left: -180px;
+}
+
+.heading {
+	margin-top: -110px;
+	margin-left: -60px;
+	font-size: 30px;
+}
+
+<!--
+-->
+header {
+	height: 120px;
+}
+
+header h1 {
+	float: left;
+	margin-top: 32px;
+}
+
+header h1 .color {
+	color: #02b8dd;
+}
+
+.headernavs {
+}
+
+.headernavs nav ul {
+	margin-bottom: 40px;
+	margin-top: -40px;
+	margin-left: 50px;
+}
+
+
+.headernavs nav ul li {
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+	padding-right: 46.7px;
+	border-right: 1px solid white;
+}
+
+.headernavs nav ul li a {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.about {
+	margin-top: -7px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left:0px;
+}
+
+
+footer {
+	padding: 60px 0;
+	background-color: white;
+}
+
+#footer-info {
+	width: 380px;
+	float: left;
+	margin-top: 10px;
+	font-size: 20px;
+	color: #1c5080;
+}
+
+#footer-links {
+	width: 520px;
+	float: right;
+}
+
+#footer-links ul {
+	width: 150px;
+	float: left;
+	margin-left: 20px;
+}
+
+#footer-links ul li {
+	margin: 10px 0;
+}
+
+#email i {
+	margin-top: 20px;
+}
+
+#phone i {
+	margin-top: 20px;
+}
+
+#email, #phone {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#email p {
+	margin-top: -35px;
+	padding-left: 45px;
+}
+
+#phone p {
+	margin-top: -35px;
+	padding-left: 45px;
+}
+
+#phone {
+	margin-top: -70px;
+	margin-left: 600px;
+	width: 400px;
+}
+
+#email {
+	margin-top: -50px;
+	margin-left: 100px;
+	width: 400px;
+}
+
+#openhours {
+	margin-top: -50px;
+	margin-left: 1000px;
+	width: 400px;
+}
+
+#openhours p {
+	margin-top: -30px;
+	width: 400px;
+	margin-left: 50px;
+	font-weight: bold;
+}
+
+#footer-info img {
+	margin-left: 1100px;
+}
+
+#footer_1 {
+	background-color: #d5e7f3;
+	width: 1440px;
+	height: 180px;
+	margin-top: -69px;
+	margin-left: -250px;
+}
+
+#footer_1_para2 {
+	margin-top: 50px;
+	margin-left: 500px;
+}
+
+#footer_1 a {
+	color: #1c5080;
+}
+
+#footer_1 a:hover {
+	color: #0f25f7;
+}
+
+#footer_2 {
+	border-top: 4px solid #1c5080;
+	background-color: white;
+	width: 1440px;
+	margin-left: -250px;
+	margin-top: -18px;
+	height: 100px;
+}
+
+#footer_2 p {
+	margin-left: 530px;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+#footer_2 img {
+	margin-top: -20px;
+}
+
+#footer_2 a {
+	color: #1c5080;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	padding-top: 20px;
+	margin-left: -10px;
+	padding-left: 20px;
+	background-color: #1c5080;
+	height: 40px;
+	width: 100px;
+	text-align: center;
+	padding-left: 2.4px;
+}
+
+.dropdown-content {
+	display: none;
+	margin-top: 22px;
+	margin-left: -12.5px;
+	min-width: 159px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	background-color: #f3f7e3;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#droplink1:hover, #droplink2:hover, #droplink3:hover, #droplink4:hover,
+	#droplink5:hover, #droplink6:hover, #droplink7:hover, #droplink8:hover,
+	#droplink10:hover, #droplink11:hover, #droplink9:hover {
+	background-color: #1c5080;
+	color: white;
+}
+
+#droplink1, #droplink2, #droplink3, #droplink4, #droplink5, #droplink6,
+	#droplink7, #droplink8, #droplink10, #droplink11, #droplink9 {
+	color: black;
+}
+
+.navig {
+	width: 13px;
+	height: 13px;
+	background: gray;
+	display: inline-block;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@
+keyframes fade {
+	from {opacity: 0.4;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+.active, .dot:hover {
+	background-color: #333;
+}
+
+#services {
+	padding-top: -7px;
+}
+
+#provinces {
+	margin-left: -3px;
+}
+
+#arrow-cursora, #arrow-cursorb {
+	margin-right: -30px;
+	padding-left: 5px;
+	color: white;
+}
+
+#signouticon {
+	color:#FFF;
+	padding-top:-100px;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left:1255px;
+	cursor:pointer;
+}
+
+#signoutname {
+	margin-bottom:20px;
+	margin-left:-140px;
+	color:white;
+	font-weight: bold;
+	font-size: 20px;
+	cursor:pointer;
+}
+
+#signout {
+	color: #FFF;
+	margin-left: 1127px;
+	background-color: #1c5080;
+	margin-top:-40px;
+	font-style: normal;
+	border-radius: 5px;
+	width: 11%;
+	height:53px;
+	border: 1px solid #1c5080;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 #1c5080 inset;
+	cursor:pointer;
+}
+
+#arrow-cursor2 {
+	margin-right: -120px;
+	padding-bottom: -280px;
+	padding-left: 5px;
+	color: white;
+}

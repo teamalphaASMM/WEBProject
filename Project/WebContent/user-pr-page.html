@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>User Profile Page</title>
+        <link rel=icon href=images/mainico.ico>
+<link rel="stylesheet" type="text/css" href="css/userpr.css">
+           <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>      
+     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">   
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>    
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+         <script src="js/userpr.js"></script>
+</head>
+	<header>
+		<div class="wrapper">
+			<h1>
+				<img src="images/logo.jpg" class="floatleft" height="120"
+					width="120" alt="Logo">
+				<div class="heading">
+					Government Of Canada<br> Gouvernement du Canada
+				</div>
+			</h1>
+			<br> <br> <br> <br>
+		</div>
+	</header>
+	<div class="headernavs">
+
+		<nav>
+
+			<ul>
+
+				<li class="tabs"><a href="#" onmouseover="myFunction()"
+
+					onmouseout="removeI()">Home</a>
+
+
+
+					<!--<div id="myDropdown" class="dropdown-content">
+
+						<a href="#home">Home</a> <a href="#about">About</a> <a
+
+							href="#contact">Contact</a>
+
+
+
+					</div>-->
+					</li>
+
+				<li class="tabs"><a href="#">Services</a> <i
+
+					class="fa fa-caret-down"></i></li>
+
+				<li class="tabs"><a href="#">Provinces</a></li>
+
+				<li class="tabs"><a href="#">Jobs</a></li>
+
+				<li class="tabs"><a href="#">Culture</a></li>
+
+				<li class="tabs"><a href="#" id = "about">About Job</a></li>
+
+				<li class="tabs"><a href="#">FAQs</a></li>
+
+				<li class="tabs"><a href="#" id = "about">Contact Us</a></li>
+
+			</ul>
+
+		</nav>
+
+	</div>
+<div class="container">
+<fieldset>
+  <form class="modal-content" action="" name="eligibilitycheck" onsubmit="return(validateForm());">
+  
+      <h1>User Details</h1>
+      
+      
+      
+      
+      
+      <label for="fname"><b>First Name:</b></label>
+	  <br/>
+ <input type="text" id="fname" name="fname" disabled />
+<br/>
+      <label for="lName"><b>Last Name:</b></label>
+	  <br/>
+      <input type="text" id="lname" name="laname" disabled>
+      <br/>
+ <label for="contact"><b>Contact:</b></label>
+ <br/>
+ <input type="text" id="contact" name="contact" disabled>
+ <br/>
+ <label for="email"><b>Email:</b></label>
+ <br/>
+ <input type="text" id="email1" name="email1" disabled>
+ <br/>
+ 
+      
+  
+  </form>
+ </fieldset>
+ 
+ <fieldset>
+  <form class="modal-content" action="" name="eligibilitycheck" onsubmit="return(validateForm());">
+  
+      <h1>Application Details</h1>
+      
+      
+      
+      
+      
+      <label for="appno"><b>Application No:</b></label>
+	  <br/>
+ <input type="text" id="appno" name="appno" disabled />
+<br/>
+      <label for="appstatus"><b>Application Status:</b></label>
+	  <br/>
+      <input type="text" id="appstatus" name="appstatus" disabled>
+      <br/>
+ <label for="crano"><b>CRA Number:</b></label>
+ <br/>
+ <input type="text" id="crano" name="crano" disabled >
+ <br/>
+ 
+ 
+     
+  </form>
+ </fieldset>
+ <div class="clearfix">
+        
+        <input type="submit"  class="eligibilityBtn" value="Confirm"/>
+		<input type="submit"  class="eligibilityBtn" value="Make changes"/>
+      </div>
+	<footer>
+	
+		<div class="wrapper">
+			<div id="footer-info">
+				<div id="footer_1">
+					<div id="email">
+						<i class="material-icons" style="font-size: 36px; color: black">email</i>
+						<p>expressentryinfo@cic.gc.ca</p>
+					</div>
+					<div id="phone">
+						<i class="material-icons" style="font-size: 36px; color: black">phone</i>
+						<p>+1-416-123-1234</p>
+					</div>
+					<div id="openhours">
+						<i class="material-icons" style="font-size: 36px; color: black">home</i>
+						<p>Monday - Friday : 8 AM - 5 PM</p>
+					</div>
+					<p id="footer_1_para2">
+						<a href="#">Terms of Service</a> I <a href="#">Privacy</a> I <a
+							href="#">Careers</a> I <a href="#">History</a>
+					</p>
+				</div>
+				<div id="footer_2">
+					<br>
+					<p>Copyright © 2018 Government of Canada</p>
+					<img src="images/can_footer.jpg" height="70" width="270"
+						alt="Logo">
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+	</div>
+</body>
+</html>

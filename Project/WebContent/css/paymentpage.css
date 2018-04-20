@@ -1,0 +1,771 @@
+body {
+	background-color: #fff;
+	color: #777;
+	font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	min-width: 1440px;
+	max-width: 1440px
+}
+
+p {
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	color: #444;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-weight: 300;
+	color: #444;
+	font-size: 55px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 30px;
+	color: #444;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h4 {
+	font-size: 24px;
+	color: #444;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+h5 {
+	font-size: 15px;
+	color: #444;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	color: #0f25f7;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 13px;
+	color: #777;
+	font-style: italic;
+}
+
+.clear {
+	clear: both;
+}
+
+
+form {
+	width: 300px;
+	margin-left: 80px;
+	background: #f4f7f8;
+	border-radius: 8px;
+}
+
+#h1div {
+	background-color: #1d6683;
+	color: white;
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+#prform {
+	margin-top: 70px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	color: #444;
+	font-size: 30px;
+	margin-bottom: 40px;
+	text-align: center;
+	margin-left: 300px;
+	margin-right: 300px;
+	border-bottom: 2px solid #a2251e;
+}
+
+#formheader {
+	margin: 5px 0 30px 0;
+	padding-top: 15px;
+	text-align: center;
+}
+
+input[type="password"], input[type="date"], input[type="datetime"],
+	input[type="email"], input[type="number"], input[type="search"], input[type="tel"],
+	input[type="time"], input[type="url"], select {
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	font-size: 16px;
+	height: auto;
+	margin-top: -80px;
+	outline: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 81.5%;
+	background-color: #ebe9ef;
+	color: #8a97a0;
+	margin-left: 180px;
+}
+
+select {
+	padding: 6px;
+	height: 32px;
+	border-radius: 2px;
+}
+
+.submitbutton {
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background-color: #1c5080;
+	font-size: 22px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 22%;
+	border: 1px solid #1c5080;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 #1c5080 inset;
+	margin-bottom: 10px;
+	cursor:pointer;
+}
+
+.resetbutton {
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background-color: #b81212;
+	font-size: 22px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 20%;
+	border: 1px solid #b81212;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 #b81212 inset;
+	margin-bottom: 10px;
+	cursor:pointer;
+}
+
+.paybuttons {
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background-color: #1c5080;
+	font-size: 22px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 22%;
+	border: 1px solid #1c5080;
+	border-width: 3px;
+	box-shadow: 0 -1px 0 #1c5080 inset;
+	margin-bottom: 10px;
+	cursor:pointer;
+}
+
+fieldset {
+	margin-bottom: 30px;
+	border: none;
+}
+
+legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-left: 15px;
+	margin-left: -12px; color : white;
+	background-color: #1c5080;;
+	width: 1180px;
+	height: 40px;
+	color: white;
+}
+
+
+#emailinvalid,#sscoreinvalid,#wscoreinvalid,#lscoreinvalid
+,#ldateinvalid,#dobinvalid,#rscoreinvalid,#genderinvalid,#provinceinvalid,#eduinvalid,
+#crsinvalid,#cocinvalid {
+	color:red;
+	font-size:18px;
+	margin-left:180px;
+}
+
+#paypaldiv button{
+	text-align : left;
+}
+
+#paypaldiv button:hover #pico{
+	background-color:white;
+	color:#1c5080;
+	
+}
+
+#paypaldiv button:hover {
+	background-color:white;
+	color:#1c5080;
+	border: 1px solid #1c5080;
+	border-width: 3px;
+	box-shadow: 0 -1px 0 white inset;
+	
+}
+
+#googlediv button{
+	text-align : left;
+}
+
+
+#gico {
+	margin-right:8px;
+	margin-left: -14px;
+	color:white;
+	font-size:22px;
+}
+
+#googlediv button:hover #gico{
+	background-color:white;
+	color:#1c5080;
+	
+}
+
+#googlediv button:hover {
+	background-color:white;
+	color:#1c5080;
+	border: 1px solid #1c5080;
+	border-width: 3px;
+	box-shadow: 0 -1px 0 white inset;
+	
+}
+
+#pico {
+	margin-right:12px;
+	margin-left: -14px;
+	color:white;
+	font-size:22px;
+}
+
+#carddiv button{
+	text-align : left;
+}
+
+#debittext {
+	margin-left:-10px;
+	font-size:20px;
+}
+
+#cico {
+	margin-right:15px;
+	color:white;
+	font-size:22px;
+	margin-left:-15px;
+}
+
+#carddiv button:hover #cico{
+	background-color:white;
+	color:#1c5080;
+	
+}
+
+#carddiv button:hover {
+	background-color:white;
+	color:#1c5080;
+	border: 1px solid #1c5080;
+	border-width: 3px;
+	box-shadow: 0 -1px 0 white inset;
+	font-size:20.5px;
+	
+}
+
+#onlinediv button{
+	text-align : left;
+}
+
+
+#oico {
+	margin-right:8px;
+	margin-left: -19px;
+	color:white;
+	font-size:22px;
+}
+
+#onlinediv button:hover #oico{
+	background-color:white;
+	color:#1c5080;
+	
+}
+
+#onlinediv button:hover {
+	background-color:white;
+	color:#1c5080;
+	border: 1px solid #1c5080;
+	border-width: 3px;
+	box-shadow: 0 -1px 0 white inset;
+	
+}
+
+#scotiaicon {
+	border: 3px solid #1c5080;
+	width:25%;
+	height:90px;
+	margin-top:15px;
+}
+
+#scotiainp {
+	border: none;
+	font-size: 20px;
+	height: 18px;
+	margin-left: 10px;
+	margin-top: 35px;
+	background-color: #ebe9ef;
+	color: #1c5080;
+}
+
+#tdinp {
+	border: none;
+	font-size: 20px;
+	height: 18px;
+	margin-left: 10px;
+	margin-top: 35px;
+	background-color: #ebe9ef;
+	color: #1c5080;
+}
+
+#scotiaid img {
+	border: none;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 81.5%;
+	color: #1c5080;
+	margin-left: 40px;
+	margin-top:-55px;
+}
+
+#tdid img {
+	border: none;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 81.5%;
+	color: #1c5080;
+	margin-left: 30px;
+	margin-top:-55px;
+}
+
+#tdicon {
+	border: 3px solid #1c5080;
+	width:25%;
+	height:90px;
+	margin-top:-95px;
+	margin-left:310px;
+}
+
+#tdid {
+	border: none;
+	font-size: 20px;
+	padding-top: 10px; padding-bottom : 10px;
+	width: 81.5%;
+	color: #1c5080;
+	margin-left: 10px;
+	margin-bottom: 70px;
+	padding-bottom: 10px;
+}
+
+#rbcinp {
+	border: none;
+	font-size: 20px;
+	height: 18px;
+	margin-left: 10px;
+	margin-top: 35px;
+	background-color: #ebe9ef;
+	color: #1c5080;
+}
+
+#rbcid img {
+	border: none;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 81.5%;
+	color: #1c5080;
+	margin-left: 30px;
+	margin-top:-55px;
+}
+
+#rbcicon {
+	border: 3px solid #1c5080;
+	width:25%;
+	height:90px;
+	margin-top:-95px;
+	margin-left:610px;
+}
+
+#rbcid {
+	border: none;
+	font-size: 20px;
+	padding-top: 10px; padding-bottom : 10px;
+	width: 81.5%;
+	color: #1c5080;
+	margin-left: 10px;
+	margin-bottom: 70px;
+	padding-bottom: 10px;
+}
+
+#cardDetails{
+	min-height:130px;
+	margin-top:-530px;
+	margin-left:400px;
+}
+
+#onlineform form {
+	margin-top:20px;
+	width:800px;
+	margin-left:10px;
+	color:#1c5080;
+	font-size:20px;
+	background-color:#ccdbd9;
+	height:255px;
+	padding :10px 30px;
+	
+}
+
+#cardform form {
+	margin-top:50px;
+	width:800px;
+	margin-left:10px;
+	color:#1c5080;
+	font-size:20px;
+	background-color:#ccdbd9;
+	height:355px;
+	padding :10px 30px;
+	
+}
+
+#holdname,#cardnum {
+  width: 80%;
+  background: white;
+  border: 1px solid #6C7A89;
+  padding: 8px 19px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  margin-left:15px;
+  margin-bottom:20px;
+  margin-top:0px;
+  font-size:18px;
+  color:#1c5080;
+  font-weight:bold;
+}
+
+#cardlabel,#acclabel {
+	margin-left:15px;
+	padding-top:5px;
+}
+
+#acclabel {
+	margin-left:30px;
+}
+
+#carddiv,#paypaldiv,#googlediv,#onlinediv {
+	margin-top:20px;
+}
+#expwrap {
+	margin-top:7px;
+	background: white;
+  border: 1px solid #6C7A89;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  width:150px;
+  height:30px;
+  margin-left:20px;
+}
+#month,#year {
+	 background: none;
+  border: none;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  width:63px;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  color:#1c5080;
+}
+
+#month {
+	margin-left:30px;
+}
+#year {
+	margin-left:10px;
+}
+
+#monthdiv {
+	margin-top:3px; 
+	margin-left:-27px;
+}
+
+#yeardiv {
+	margin-top: -42px;
+	margin-left:75px;
+}
+
+
+#exp {
+	margin-top:-20px;
+	margin-left:20px;
+}
+
+
+#slash {
+  padding-top: 2px;
+  font-size: 30px;
+  color: #1c5080;
+  letter-spacing: 3px;
+  margin-top:-58px;
+  margin-left:75px;
+  
+}
+
+#month option, #year option {
+  background: #ECECEC;
+}
+
+#cvvwrap {
+	margin-top:-35px;
+	background: white;
+  border: 1px solid #6C7A89;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  width:80px;
+  height:30px;
+  margin-left:575px;
+}
+
+#cvvdiv {
+	margin-top:-50px; 
+	margin-left:97px;
+}
+
+#cvv {
+	margin-top:-95px;
+	margin-left:430px;
+}
+
+#cvvinp {
+	margin-left:-87px;
+	margin-top:50px;
+	 background: none;
+  border: none;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  width:63px;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  color:#1c5080;
+}
+
+#onlineDetails {
+	min-height:130px;
+	margin-top:-520px;
+	margin-left:400px;
+	height:300px;
+}
+
+#captchaGen {
+	color:red;
+	font-size:30px;
+	font-style:italic;
+	font-weight:bold;
+	background-image: url('../images/cpatch.jpeg');
+	width:22%;
+	height:50px;
+	text-align:center;
+	margin-top:30px;
+	margin-left: 15px;
+}
+
+#captchaGenCard {
+	color:red;
+	font-size:30px;
+	font-style:italic;
+	font-weight:bold;
+	background-image: url('../images/cpatch.jpeg');
+	width:22%;
+	height:50px;
+	text-align:center;
+	margin-top:30px;
+	margin-left: 15px;
+}
+
+#password,#username {
+  width: 80%;
+  background: white;
+  border: 1px solid #6C7A89;
+  padding: 8px 19px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  margin-left:15px;
+  margin-bottom:25px;
+  margin-top:8px;
+  font-size:18px;
+  color:#1c5080;
+  font-weight:bold;
+}
+
+#userlabel,#pwdlabel {
+	margin-left:15px;
+	margin-top:-10px;
+}
+
+#captchalabel {
+	margin-top: -80px;
+	margin-left:15px;
+}
+
+#refreshbtn {
+	margin-left:-500px;
+	margin-top:15px;
+	color:#1c5080;
+	border: 1px solid white;
+	border-width: 3px;
+}
+
+#refreshbtn:hover {
+	cursor: pointer;
+}
+
+#captchainp {
+  width: 50%;
+  background: white;
+  border: 1px solid #6C7A89;
+  padding: 8px 19px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  margin-left:250px;
+  margin-top:10px;
+  font-size:15px;
+  color:#1c5080;
+  font-weight:bold;
+}
+
+#captchainp1 {
+  width: 50%;
+  background: white;
+  border: 1px solid #6C7A89;
+  padding: 8px 19px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  margin-left:250px;
+  margin-top:10px;
+  font-size:15px;
+  color:#1c5080;
+  font-weight:bold;
+}
+
+
+#btndiv {
+	margin-left:400px;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.resetbutton {
+	margin-left:50px;
+}
+
+#loginuser {
+	color: #1c5080;
+	font-size:25px;
+	font-weight: bold;
+	margin-top:70px;
+	margin-bottom:-30px;
+	margin-left:900px;
+}
+
+.onlinemessage {
+	color:red;
+	font-weight:bold;
+	font-size:25px;
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+#userinvalid,#pwdinvalid{
+	margin-top:-20px;
+	font-size:15px;
+	margin-left:500px;
+	color:red;
+}
+
+#cardinvalid,#holderinvalid{
+	margin-top:-10px;
+	font-size:15px;
+	margin-left:500px;
+	color:red;
+}
+
+#cvvinvalid  {
+	font-size:15px;
+	color:red;
+	margin-left: -140px;
+	margin-top:3px;
+	
+}
+
+#dateinvalid {
+	margin-top:-12px;
+	margin-bottom:10px;
+	font-size:15px;
+	margin-left:-600px;
+	color:red;
+}
+
+#captchainvalid,#captchainvalid1 {
+	margin-top:0px;
+	font-size:15px;
+	margin-left:500px;
+	color:red;
+}
+
