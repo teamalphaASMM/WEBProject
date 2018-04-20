@@ -72,6 +72,9 @@ function validateForm() {
 		document.getElementById("provinceinvalid").innerHTML = "*Please select a province";
 		isFormValid = false;
 
+	} else {
+		document.getElementById("provinceinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 	
 	var date1 = document.forms["eligibilitycheck"]["datepicker"];
@@ -81,6 +84,9 @@ function validateForm() {
 
 		document.getElementById("dateinvalid").innerHTML = "*Please enter the date";
 
+	} else {
+		document.getElementById("dateinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 	
 	var speakingScore = document.forms["eligibilitycheck"]["speaking"];
@@ -89,6 +95,9 @@ function validateForm() {
 
 		document.getElementById("speakinginvalid").innerHTML = "*Please enter the speaking score";
 
+	} else {
+		document.getElementById("speakinginvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var writingScore = document.forms["eligibilitycheck"]["writing"];
@@ -97,6 +106,9 @@ function validateForm() {
 
 		document.getElementById("writinginvalid").innerHTML = "*Please enter the writing score";
 
+	} else {
+		document.getElementById("writinginvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var readingScore = document.forms["eligibilitycheck"]["reading"];
@@ -105,6 +117,9 @@ function validateForm() {
 
 		document.getElementById("readinginvalid").innerHTML = "*Please enter the reading score";
 
+	} else {
+		document.getElementById("readinginvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var listeningScore = document.forms["eligibilitycheck"]["listening"];
@@ -113,6 +128,9 @@ function validateForm() {
 
 		document.getElementById("listeninginvalid").innerHTML = "*Please enter the listening score";
 
+	} else {
+		document.getElementById("listeninginvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var selectSkilled = document.forms["eligibilitycheck"]["skilledCanada"];
@@ -121,6 +139,9 @@ function validateForm() {
 
 		document.getElementById("totalskillinvalid").innerHTML = "*Please enter the appropriate value";
 
+	} else {
+		document.getElementById("totalskillinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var selectTotal = document.forms["eligibilitycheck"]["totalSkilled"];
@@ -129,6 +150,9 @@ function validateForm() {
 
 		document.getElementById("skillinvalid").innerHTML = "*Please select an appropriate value";
 
+	} else {
+		document.getElementById("skillinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var selectJob = document.forms["eligibilitycheck"]["jobOffer"];
@@ -137,6 +161,9 @@ function validateForm() {
 
 		document.getElementById("jobinvalid").innerHTML = "*Please enter a valid job experience";
 
+	} else {
+		document.getElementById("jobinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	var selectLegal = document.forms["eligibilitycheck"]["legal"];
@@ -145,6 +172,9 @@ function validateForm() {
 
 		document.getElementById("legalinvalid").innerHTML = "*Please enter a valid legal status";
 
+	} else {
+		document.getElementById("legalinvalid").innerHTML = "";
+		isFormValid = true;
 	}
 
 	if (isFormValid) {
