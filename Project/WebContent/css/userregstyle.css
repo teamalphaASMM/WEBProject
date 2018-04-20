@@ -5,7 +5,10 @@ body {
 
   color: #384047;
 
+
+
 }
+
 
 
 
@@ -39,7 +42,85 @@ form {
 
 }
 
+.headernavs nav ul {
 
+	margin-bottom: 40px;
+
+	margin-top: 80px;
+
+	margin-left: 200px;
+
+
+}
+
+
+
+.headernavs nav ul li {
+
+	float: left;
+
+	display: inline-block;
+
+	margin-right: 10px;
+
+	padding-right: 100px;
+
+	border-top: 1px solid white;
+
+}
+
+
+
+.headernavs nav ul li a {
+
+	color: white;
+
+	text-transform: uppercase;
+
+	font-weight: bold;
+
+	display: block;
+
+	margin-left: 10px;
+
+	padding-left: 10px;
+
+}
+
+
+
+#about {
+
+	margin-top: -7px;
+
+}
+
+
+
+.headernavs nav ul li a:hover {
+
+	color: #ac201e;
+
+}
+.tabs {
+
+	padding-top: 20px;
+
+	margin-left: -73px;
+
+	padding-left: 20px;
+
+	background-color: #1c5080;
+
+	height: 40px;
+
+	width: 100px;
+
+	text-align: center;
+
+	padding-left: 2.4px;
+
+}
 
 #h1div {
 
@@ -269,7 +350,7 @@ label.light {
 
 #pageheader {
 
-	margin-top:30px;
+	margin-top:100px;
 
 	text-align: center;
 
@@ -360,7 +441,7 @@ label.light {
 	border-top: 4px solid #1c5080;
 	background-color: white;
 	width: 1800px;
-	margin-left:-10px;
+	margin-left:150px;
 	margin-top: -18px;
 	height: 100px;
 }
