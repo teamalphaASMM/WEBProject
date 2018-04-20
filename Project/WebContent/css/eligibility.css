@@ -1,3 +1,5 @@
+
+
 body {font-family: Arial, Helvetica, sans-serif;
        overflow: auto;
 }
@@ -16,6 +18,14 @@ input[type=text]:focus, input[type=password]:focus,select {
     outline: none;
 }
 
+select {
+	height:40px;
+}
+
+#datepicker {
+	width:700px;
+}
+
 .eligibilityBtn {
     background-color: #4CAF50;
     color: white;
@@ -25,6 +35,41 @@ input[type=text]:focus, input[type=password]:focus,select {
     cursor: pointer;
     width: 50%;
     opacity: 0.9;
+}
+
+#provinceinvalid {
+	color:red;
+	margin-right:500px;
+}
+
+#writinginvalid{
+	color:red;
+	margin-right:500px;
+}
+
+#listeninginvalid{
+	color:red;
+	margin-right:500px;
+}
+
+#speakinginvalid{
+	color:red;
+	margin-right:500px;
+}
+
+#readinginvalid,#totalskillinvalid,#skillinvalid,#dateinvalid{
+	color:red;
+	margin-right:500px;
+}
+	
+#jobinvalid{
+	color:red;
+	margin-right:500px;
+}
+
+#legalinvalid{
+	color:red;
+	margin-right:500px;
 }
 
 button:hover {
@@ -430,4 +475,6 @@ header h1 {
 	padding-left: 2.4px;
 
 }
+
+
 

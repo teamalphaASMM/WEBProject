@@ -83,73 +83,38 @@
       <label for="province"><b>Please select a province</b></label>
 	  <br/>
  <select name="province" id="province" required>
-  <option value="selProvince">Select a province</option>
-  <option value="AB">Alberta</option>
-	<option value="BC">British Columbia</option>
-	<option value="MB">Manitoba</option>
-	<option value="NB">New Brunswick</option>
-	<option value="NL">Newfoundland and Labrador</option>
-	<option value="NS">Nova Scotia</option>
-	<option value="ON">Ontario</option>
-	<option value="PE">Prince Edward Island</option>
-	<option value="QC">Quebec</option>
-	<option value="SK">Saskatchewan</option>
-	<option value="NT">Northwest Territories</option>
-	<option value="NU">Nunavut</option>
-	<option value="YT">Yukon</option>
 </select>
+<div id = "provinceinvalid"></div>
 <br/>
       <label for="date"><b>Enter the date you took the test on</b></label>
 	  <br/>
       <input type="text" id="datepicker" name="date" >
       <br/>
+<div id = "dateinvalid"></div>
  <label for="speaking"><b>Enter your score in speaking</b></label>
  <br/>
- <select name="speaking" >
- <option value="selSpeaking">Select a value</option>
-  <option value="6.5">6.5</option>
-        <option value="7.0">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8.0">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9.0">9.0</option>
+ <select name="speaking" id="speaking">
 </select>
 <br/>
+<div id = "speakinginvalid"></div>
   <label for="writing"><b>Enter your score in writing</b></label>
   <br/>
- <select name="writing" >
- <option value="selWriting">Select a value</option>
-        <option value="7.0">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8.0">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9.0">9.0</option>
+ <select name="writing" id="writing">
  </select>
  <br/>
+ <div id = "writinginvalid"></div>
    <label for="reading"><b>Enter your score in reading</b></label>
    <br/>
- <select name="reading" >
-  <option value="selReading">Select a value</option>
-  <option value="6.5">6.5</option>
-        <option value="7.0">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8.0">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9.0">9.0</option>
+ <select name="reading" id="reading">
 </select>
 <br/>
+<div id = "readinginvalid"></div>
     <label for="listening"><b>Enter your score in listening</b></label>
 	<br/>
- <select name="listening" >
-  <option value="selListening">Select a value</option>
-  <option value="6.5">6.5</option>
-        <option value="7.0">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8.0">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9.0">9.0</option>
+ <select name="listening" id="listening">
 </select>
 <br/>
+<div id = "listeninginvalid"></div>
      <label for="skilledCanada"><b><p>In the last three years, how many years of skilled work experience do you have in Canada?</p><p> It must have been full-time (or an equal amount in part time).</p></b></label>
 	 <br/>
  <select name="skilledCanada" required>
@@ -157,6 +122,7 @@
    <option value="less than one year">less than one year</option>
         <option value="one year or more">one year or more</option>
 </select>
+<div id = "skillinvalid"></div>
      
      <br/>
  <label for="totalSkilled"><b><p>In the last 10 years, how many years of skilled work experience do you have? It must</p><p> have been continuous, paid, full-time (or an equal amount in part-time), and in only one occupation.</p></b></label>
@@ -170,6 +136,7 @@
         <option value="4-5 years">4-5 years</option>
         <option value="6 or more">6 or more</option>
 </select>
+<div id = "totalskillinvalid"></div>
      <br/>
  <label for="jobOffer"><b>Do you have a valid job offer in Canada</b></label>
  <br/>
@@ -179,6 +146,8 @@
   <option value="no">No</option>
   
 </select>
+<div id = "jobinvalid"></div>
+
  
  <br/>
   <label for="legal"><b>Are you currently working legally in Canada?</b></label>
@@ -188,9 +157,10 @@
  <option value="yes">Yes</option>
   <option value="no">No</option>
 </select>
+<div id = "legalinvalid"></div>
       <div class="clearfix">
         
-        <input type="submit"  class="eligibilityBtn" value="Check Eligibility"/>
+        <input type="button" onclick="validateForm()" class="eligibilityBtn" value="Check Eligibility"/>
       </div>
   
   </form>
