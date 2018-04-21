@@ -111,7 +111,7 @@
           <input type="text" id="edu1" name="edu" disabled>
           
       </form>
-	  <button type="button" id="done" value="Done" onclick ="validate()">Load Documents</button>
+	  <button type="button" id="done" value="Done" onclick ="goToPayment()">Proceed To Payment</button>
 	   <script>
 	   window.onload = function validate(){
 	   
@@ -187,6 +187,10 @@
 		        	document.getElementById("edu1").value = localStorage.getItem(loginuser+"edudoc");
 		        }
 		}
+	   
+	  function goToPayment() {
+		   
+	   }
 		
 </script>
       <footer>

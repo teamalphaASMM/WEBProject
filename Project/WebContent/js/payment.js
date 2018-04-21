@@ -200,6 +200,11 @@ function checkCaptcha(code,codeInput) {
 	}
 }
 
+function validateCard() {
+var re16digit = /^\d{16}$/;
+return re16digit.test(String(document.getElementById("cardnum").value).toLowerCase());
+}
+
 function validateForm() {
 
 	var unameMandatory = "";
@@ -243,6 +248,8 @@ function validateForm() {
 		if (String(document.getElementById("cardnum").value).length == 0) {
 			cardNumberMandatory = "*Card Number is Mandatory";
 			isFormValid = false;
+		} else if (!validateCard()) {
+			cardNumberMandatory = "*Invalid Card Number";
 		} else {
 			cardNumberMandatory = "";
 		}
