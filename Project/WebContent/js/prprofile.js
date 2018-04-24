@@ -92,10 +92,12 @@ function populateCred(dropdowndata, id) {
 $(function() {
 	var status = localStorage.getItem(localStorage.getItem("loginuser")
 			+ "status");
+	//If the form is submitted it will show a message and redirect to profile page.
 	if (status === "Form Submitted") {
 
 		$('form').hide();
 		$('#btndiv').hide();
+		$('#prform').hide();
 
 		var modal3 = document.getElementById('noEntryModal');
 		modal3.style.display = "block";
@@ -125,7 +127,8 @@ $(function() {
 	});
 
 	//The on change functions for all the fields for proper validations.
-
+	//On all the change functions, proper validations are checked and css for messages and border color is displayed.
+	//On change functions facilitates dynamic validations on each field.
 	$("#dob")
 			.change(
 					function() {
@@ -386,6 +389,8 @@ $(function() {
 						}
 					})
 
+	//IELTS Score validations. On change of each score, the dependent calculate button div could also change.
+	//The button could be shown or hidden along with difference in messages.
 	$("#lscore")
 			.change(
 					function() {
@@ -416,10 +421,20 @@ $(function() {
 						}
 						if ($('#calButton').is(':visible')) {
 							document.getElementById('crsinvalid').innerHTML = "*You should calculate the CRS Score. Please click 'Calculate' button";
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							$("#calButton").click(function() {
 								crsScoreMandatory = "";
 							})
 						} else if (!(s === 'y' && w === 'y' && r === 'y' && l === 'y')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*Make sure proper IELTS score is provided.";
 						} else {
 							document.getElementById('crsinvalid').innerHTML = "";
@@ -454,11 +469,21 @@ $(function() {
 							$('#calButton').hide();
 						}
 						if ($('#calButton').is(':visible')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*You should calculate the CRS Score. Please click 'Calculate' button";
 							$("#calButton").click(function() {
 								crsScoreMandatory = "";
 							})
 						} else if (!(s === 'y' && w === 'y' && r === 'y' && l === 'y')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*Make sure proper IELTS score is provided.";
 						} else {
 							document.getElementById('crsinvalid').innerHTML = "";
@@ -477,7 +502,7 @@ $(function() {
 							document.getElementById('sscoreinvalid').innerHTML = "";
 						} else {
 							$("#sscore").css('border-right-style', 'solid');
-							$("#sscore").css('border-right-color', 'green');
+							$("#sscore").css('border-right-color', 'red');
 							$("#sscore").css('border-right-width', '15px');
 							$("#sscore").css('border-radius', '3px');
 							s = 'n';
@@ -494,11 +519,21 @@ $(function() {
 							$('#calButton').hide();
 						}
 						if ($('#calButton').is(':visible')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*You should calculate the CRS Score. Please click 'Calculate' button";
 							$("#calButton").click(function() {
 								crsScoreMandatory = "";
 							})
 						} else if (!(s === 'y' && w === 'y' && r === 'y' && l === 'y')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*Make sure proper IELTS score is provided.";
 						} else {
 							document.getElementById('crsinvalid').innerHTML = "";
@@ -534,11 +569,21 @@ $(function() {
 							$('#calButton').hide();
 						}
 						if ($('#calButton').is(':visible')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*You should calculate the CRS Score. Please click 'Calculate' button";
 							$("#calButton").click(function() {
 								crsScoreMandatory = "";
 							})
 						} else if (!(s === 'y' && w === 'y' && r === 'y' && l === 'y')) {
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							document.getElementById('crsinvalid').innerHTML = "*Make sure proper IELTS score is provided.";
 						} else {
 							document.getElementById('crsinvalid').innerHTML = "";
@@ -559,6 +604,7 @@ $(function() {
 		modal.style.display = "none";
 	})
 
+	//On click of the calculate button, if invalid scores are displayed, it will show a modal with error message
 	$("#calButton")
 			.click(
 					function() {
@@ -567,6 +613,11 @@ $(function() {
 								|| document.getElementById('wscore').value === 'Less than 6.0'
 								|| document.getElementById('sscore').value === 'Less than 6.0') {
 
+							$("#crs").css('width', '935px');
+							$("#crs").css('border-radius', '3px');
+							$("#crs").css('border-right-style', 'solid');
+							$("#crs").css('border-right-color', 'red');
+							$("#crs").css('border-right-width', '15px');
 							var modal = document
 									.getElementById('ieltsinvalidmodal');
 
@@ -750,7 +801,7 @@ function validateEmail(email) {
 	return re.test(String(email).toLowerCase());
 }
 
-//Validate LScore method
+//Validate Form method
 //Called on the submit button click
 function validateForm() {
 
@@ -1038,6 +1089,14 @@ function showFinal() {
 	span.onclick = function() {
 		modal.style.display = "none";
 	}
+}
+
+//The set status function.
+function setStatus() {
+	
+	localStorage.setItem(localStorage.getItem("loginuser") + "status",
+	"Form Submitted");
+	location.href = "upload.html";
 }
 
 //The signOut method.

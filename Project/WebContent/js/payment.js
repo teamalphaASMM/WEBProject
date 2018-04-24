@@ -1,3 +1,4 @@
+//The window on load function
 window.onload = function() {
 
 	var codeCard = "";
@@ -30,6 +31,7 @@ window.onload = function() {
 	}
 };
 
+//The method to populate months and years
 function populateMonthYears(dropdowndata, id) {
 	var displayDrop = "";
 	for (i = 0; i < dropdowndata.length; i++) {
@@ -38,6 +40,7 @@ function populateMonthYears(dropdowndata, id) {
 	document.getElementById(id).innerHTML = displayDrop;
 }
 
+//The function called on online method of payment.
 function regulateOnline() {
 	$("#obtn").css("border-color", "#ce9132");
 	$("#cbtn").css("border-color", "#1c5080");
@@ -52,6 +55,7 @@ function regulateOnline() {
 	$("#onlineDetails").show();
 }
 
+//The function on load window.
 $(function() {
 
 	//$("#header").load("header.html");
@@ -89,6 +93,7 @@ $(function() {
 
 })
 
+//The loader function to show animation.
 function callLoad() {
 	$('.modal1').show();
 	$('#loader').show();
@@ -96,6 +101,7 @@ function callLoad() {
 
 }
 
+//The show success method to show the success message.
 function showSuccess() {
 
 	$('#loader').hide();
@@ -119,6 +125,7 @@ function showSuccess() {
 
 }
 
+//The regulate card function to call on card input.
 function regulateCard() {
 	$("#obtn").css("border-color", "#1c5080");
 	$("#cbtn").css("border-color", "#ce9132");
@@ -134,6 +141,7 @@ function regulateCard() {
 	$('#btndiv').show();
 }
 
+//The regulate paypal function to paypal input.
 function regulatePayPal() {
 	$("#obtn").css("border-color", "#1c5080");
 	$("#cbtn").css("border-color", "#1c5080");
@@ -141,6 +149,7 @@ function regulatePayPal() {
 	$("#gbtn").css("border-color", "#1c5080");
 }
 
+//The regulate wallet function to wallet input.
 function regulateWallet() {
 	$("#obtn").css("border-color", "#1c5080");
 	$("#cbtn").css("border-color", "#1c5080");
@@ -148,11 +157,13 @@ function regulateWallet() {
 	$("#gbtn").css("border-color", "#ce9132");
 }
 
+//The signout function.
 function signOut() {
 	location.href = 'signin.html';
 	localStorage.removeItem("loginuser");
 }
 
+//The captcha generated function.
 function generateCaptcha() {
 	var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 			'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
@@ -171,6 +182,7 @@ function generateCaptcha() {
 	return false;
 }
 
+//The captcha generated function.
 function generateCaptchaCard() {
 	var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 			'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
@@ -189,6 +201,7 @@ function generateCaptchaCard() {
 	return false;
 }
 
+//The captcha check function.
 function checkCaptcha(code,codeInput) {
 	var captcha = removeSpaces(code);
 	var captchaTest = removeSpaces(codeInput);
@@ -200,6 +213,7 @@ function checkCaptcha(code,codeInput) {
 	}
 }
 
+//Card validation function
 function validateCard() {
 var re16digit = /^\d{16}$/;
 return re16digit.test(String(document.getElementById("cardnum").value).toLowerCase());

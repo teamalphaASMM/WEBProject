@@ -1,4 +1,4 @@
-
+//The window on load function called on page load.
 var imagePos = 1;
 window.onload = function() {
 	displayImage(imagePos);
@@ -6,21 +6,21 @@ window.onload = function() {
 };
 
 
-
+//The fnction to increment images in the slider.
 function incrImages(n){
 
 displayImage(imagePos += n);
 
 }
 
-
+//To select active image for slider.
 function activeSlide(n) {
 
 displayImage(imagePos = n);
 
 }
 
-
+//The display image image to display slide images.
 function displayImage(n){
 
 var i;
@@ -50,6 +50,8 @@ images[imagePos-1].style.display = "block";
 navig[imagePos-1].className += " active";
 
 }
+
+//The automatic image slider with time out function.
 function headerImageSlider() {
 	var i;
 	var images = document.getElementsByClassName("hiimage");
@@ -63,6 +65,7 @@ function headerImageSlider() {
 		}
 		images[imagePos-1].style.display = "block";
 		imagePos++;
+		//Set timeout of 2.5 seconds before each slide.
 		setTimeout(headerImageSlider,2500);
 
 }
