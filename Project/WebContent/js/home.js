@@ -70,5 +70,24 @@ function headerImageSlider() {
 
 }
 
+//On scroll function.
+window.onscroll = function() {
+	navStickFuntion()
+};
+
+//The function to make navigation bar to follow.
+function navStickFuntion() {
+	// Get the navbar
+	var navbar = document.getElementById("myHeader");
+
+	// Get the offset position of the navbar
+	var sticky = navbar.offsetTop;
+	if (window.pageYOffset >= 128) {
+		navbar.classList.add("sticky")
+	} else {
+		navbar.classList.remove("sticky");
+	}
+}
+
 
 
