@@ -66,6 +66,8 @@ header h1 .color {
   top: 0;
   width: 100%;
   margin-left:0px;
+  	min-width: 1440px;
+	max-width: 1440px;
 }
 
 
