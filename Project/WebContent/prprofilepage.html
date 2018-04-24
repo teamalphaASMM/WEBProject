@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/infoicons.css">
 <link rel="stylesheet" type="text/css" href="css/headerfooter.css">
 <link rel="stylesheet" type="text/css" href="css/dialoguebox.css">
+<link rel="stylesheet" type="text/css" href="css/datepicker.css">
 <link rel=icon href=images/mainico.ico>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,6 +16,9 @@
 <link rel="stylesheet" type="text/css" href="css/loader.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>      
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </head>
 <body>
 	<script src="js/prprofile.js"></script>
@@ -96,7 +100,7 @@
           </div>
         <div id = "dobdiv">
           <label for="dob" id = "doblabel">Date Of Birth:</label>
-          <input type="date" id="dob" name="dob">
+          <input type="text" id="dob" name="dob" placeholder = "Enter the date of birth">
         </div> 
         <div id = "dobinvalid">
           </div>
@@ -109,8 +113,10 @@
           </div>
         <div id = "genderdiv">
           <label for="gender" id = "genderlabel">Gender:</label>
+          <div id = "malediv">
           <input type="radio" id="maleinp" name="counciti"><span id = "male">Male</span>
           <input type="radio" id="femaleinp" name="counciti"><span id = "female">Female</span>
+          </div>
         </div> 
         <div id = "genderinvalid">
           </div>
@@ -129,7 +135,7 @@
           </div>
         <div id = "ldatediv">
           <label for="languagedate" id = "ldatelabel">Date Of Language Test:</label>
-          <input type="date" id="ldate" name="ldate">
+          <input type="text" id="ldate" name="ldate" placeholder = "Enter langauge test date">
         </div> 
         <div id = "ldateinvalid">
           </div>
@@ -182,12 +188,14 @@
              <span class="protext">Preferred province to reside. Please select one or more.</span>
            </div>
           <label for="eductation" id = "edulabel">Province to Reside:</label>
+          <div id = "proinpdiv">
           <input type="checkbox" id="Oninp" name="provinces"><span id = "On">Ontario</span>
           <input type="checkbox" id="Quinp" name="provinces"><span id = "Qu">Quebec</span>
           <input type="checkbox" id="Alinp" name="provinces"><span id = "Al">Alberta</span>
           <input type="checkbox" id="Sainp" name="provinces"><span id = "Sa">Saskatewan</span>
           <input type="checkbox" id="Mainp" name="provinces"><span id = "Ma">Manitoba</span>
           <input type="checkbox" id="BCinp" name="provinces"><span id = "BC">British Columbia</span>
+          </div>
         </div> 
         <div id = "provinceinvalid">
           </div>
@@ -200,7 +208,28 @@
  	<div class = "modal1">
  	<span class = "warningpr">Please wait while your application is Being submitted.Kindly don't reload or close the browser</span>
       <div id="loader"></div>
-      </div>       
+      </div>  
+
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      Confirmation of Submission
+    </div>
+    <div class="modal-body">
+    Do you want to submit the profile?
+    </div>
+    <div>
+     <div id = "yesbtndiv">
+     <button type="button" class = "submitbutton" id = "yesbtn" ><div id = "okchar">Yes</div></button>
+     </div>
+     <div id = "nobtndiv">
+     <button type="button" class = "submitbutton" id = "nobtn" ><div id = "okchar">No</div></button>
+     </div>
+    </div>
+  </div>
+</div>
+     
 <div id="submitModal" class="modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -212,6 +241,21 @@
     </div>
     <div>
      <button type="button" class = "submitbutton" id = "okbtn" onclick="location.href='upload.html'"><div id = "okchar">OK</div></button>
+    </div>
+  </div>
+</div>
+
+<div id="noEntryModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      Confirmation of Submission
+    </div>
+    <div class="modal-body">
+    The Profile is already submitted.
+    </div>
+    <div>
+     <button type="button" class = "submitbutton" id = "okebtn"><div id = "okchar">OK</div></button>
     </div>
   </div>
 </div>

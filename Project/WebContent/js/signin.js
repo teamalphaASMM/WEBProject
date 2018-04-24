@@ -3,13 +3,13 @@ window.onload = function() {
 	
 	var user = localStorage.getItem("loginuser");
 	var submit = localStorage.getItem(user+"status");
-	if (localStorage.getItem("loginuser") != null) {
+	/*if (localStorage.getItem("loginuser") != null) {
 		if (submit === "formsubmit") {
 			location.href = "upload.html";
 		} else {
 			location.href = "prprofilepage.html";
 		}
-	}
+	}*/
 		
 	}
 function validate() {

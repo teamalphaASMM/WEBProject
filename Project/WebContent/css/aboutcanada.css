@@ -1,5 +1,5 @@
 body{
-	width:1400px;
+	max-width:1400px;
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color:#1c5080;
 }
@@ -87,6 +87,9 @@ header h1 .color {
 	width: 940px;
 
 }
+
+
+
 .floatleft {
 
 	margin-top: -40px;
@@ -108,14 +111,87 @@ header h1 .color {
 .content{
 	width:90%;
 	margin:0;
-	padding:30px 30px 5px;
+	padding: 30px 30px 15px;
+    margin-left: 60px;
 }
-.column {
+.column1 {
     float: left;
-    width: 19%;
-    padding: 30px 30px 5px;
-	margin:0px;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+    margin-right:65px;
 	border-top: 1px solid #1c5080;
+	}
+	
+	.column2 {
+    float: left;
+    width: 21%;
+    height:20%;
+     margin-right:65px;
+    margin-left: 55px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column3 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column4 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+     margin-right:65px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column5 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+     margin-right:65px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column6 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column7 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+     margin-right:65px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column8 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+    margin-right:65px;
+	border-top: 1px solid #1c5080;
+	}
+	
+	.column9 {
+    float: left;
+    width: 21%;
+    height:20%;
+    margin-left: 55px;
+    margin-bottom:-400px;
+	border-top: 1px solid #1c5080;
+	margin-bottom:-950px;
 	}
 	
 #email i {
@@ -202,6 +278,7 @@ header h1 .color {
 
 }
 
+
 #footer_1 {
 	
 	background-color:#d5e7f3;
@@ -212,9 +289,11 @@ header h1 .color {
 
 	margin-top: -49px;
 
-	margin-left:-250px;
+	margin-left:-800px;
 
 }
+
+
 
 #footer_1_para2 {
 
@@ -244,7 +323,7 @@ header h1 .color {
 
 	width: 1400px;
 
-	margin-left:-250px;
+	margin-left:-800px;
 
 	margin-top: -18px;
 
@@ -268,6 +347,7 @@ header h1 .color {
 
 }
 
+
 #footer_2 a {
 
 color:#1c5080;
@@ -288,7 +368,7 @@ footer {
 
 	float: left;
 
-	margin-top: 10px;
+	margin-top: 680px;
 
 	font-size:20px;
 

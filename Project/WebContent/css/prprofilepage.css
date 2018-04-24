@@ -11,6 +11,29 @@ p {
 	margin-bottom: 20px;
 }
 
+#malediv {
+	font-size: 20px;
+	height: 18px;;
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 950px;
+	margin-left:180px;
+	background-color: #ebe9ef;
+}
+
+#proinpdiv {
+	font-size: 20px;
+	height: 18px;
+	margin-top: -45px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 950px;
+	margin-left:180px;
+	background-color: #ebe9ef;
+}
+
+
 h1 {
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	font-weight: bold;
@@ -152,7 +175,7 @@ select {
 	border-width: 1px 1px 3px;
 	box-shadow: 0 -1px 0 #1c5080 inset;
 	margin-bottom: 10px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .resetbutton {
@@ -168,7 +191,7 @@ select {
 	border-width: 1px 1px 3px;
 	box-shadow: 0 -1px 0 #b81212 inset;
 	margin-bottom: 10px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .calculatebutton {
@@ -205,7 +228,8 @@ legend {
 	margin-top: 10px;
 	padding-top: 15px;
 	padding-left: 15px;
-	margin-left: -12px; color : white;
+	margin-left: -12px;
+	color: white;
 	background-color: #1c5080;;
 	width: 1180px;
 	height: 40px;
@@ -343,7 +367,6 @@ legend {
 	margin-left: 180px;
 }
 
-}
 #cocdiv label {
 	padding-top: -80px;
 	text-align: right;
@@ -361,7 +384,7 @@ legend {
 }
 
 #genderdiv input {
-	margin-top: 20px;
+	margin-top: -20px;
 }
 
 #genderdiv label {
@@ -371,8 +394,8 @@ legend {
 	font-size: 20px;
 	display: block;
 	padding-bottom: 0px;
-	margin-bottom: -40px;
-	margin-top: 20px;
+	margin-bottom: -46px;
+	margin-top: 22px;
 	color: #1c5080;
 }
 
@@ -380,7 +403,7 @@ legend {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 180px;
+	margin-left: 10px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -408,7 +431,8 @@ legend {
 #female {
 	border: none;
 	font-size: 20px;
-	padding-top: 10px; padding-bottom : 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	width: 950px;
 	color: #1c5080;
 	margin-left: 10px;
@@ -444,22 +468,22 @@ legend {
 }
 
 #eduico {
-	margin-top:20px;
-	font-size:25px;
-	color:#1c5080;
-	margin-left:10px;
+	margin-top: 20px;
+	font-size: 25px;
+	color: #1c5080;
+	margin-left: 10px;
 }
 
 #proico {
-	margin-top:45px;
-	font-size:25px;
-	color:#1c5080;
-	margin-left:10px;
+	margin-top: 45px;
+	font-size: 25px;
+	color: #1c5080;
+	margin-left: 10px;
 }
 
 #prodiv {
-	margin-top: -25px;
-	margin-bottom:20px;
+	margin-top: -35px;
+	margin-bottom: 20px;
 }
 
 #prodiv label {
@@ -597,14 +621,11 @@ legend {
 	margin-bottom: 70px;
 }
 
-
-
-
 #Oninp {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 180px;
+	margin-left: 10px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -613,7 +634,7 @@ legend {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 30px;
+	margin-left: 28px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -632,7 +653,8 @@ legend {
 #Qu {
 	border: none;
 	font-size: 20px;
-	padding-top: 10px; padding-bottom : 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	width: 950px;
 	color: #1c5080;
 	margin-left: 10px;
@@ -640,12 +662,11 @@ legend {
 	padding-bottom: 10px;
 }
 
-
 #Alinp {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 40px;
+	margin-left: 30px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -661,12 +682,11 @@ legend {
 	margin-bottom: 70px;
 }
 
-
 #Sainp {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 30px;
+	margin-left: 28px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -675,7 +695,7 @@ legend {
 	border: none;
 	font-size: 20px;
 	height: 18px;
-	margin-left: 40px;
+	margin-left: 30px;
 	background-color: #ebe9ef;
 	color: #1c5080;
 }
@@ -694,7 +714,8 @@ legend {
 #Ma {
 	border: none;
 	font-size: 20px;
-	padding-top: 10px; padding-bottom : 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	width: 950px;
 	color: #1c5080;
 	margin-left: 10px;
@@ -714,7 +735,8 @@ legend {
 #BC {
 	border: none;
 	font-size: 20px;
-	padding-top: 10px; padding-bottom : 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	width: 950px;
 	color: #1c5080;
 	margin-left: 10px;
@@ -722,30 +744,29 @@ legend {
 	padding-bottom: 10px;
 }
 
-#emailinvalid,#sscoreinvalid,#wscoreinvalid,#lscoreinvalid
-,#ldateinvalid,#dobinvalid,#rscoreinvalid,#genderinvalid,#provinceinvalid,#eduinvalid,
-#crsinvalid,#cocinvalid {
-	color:red;
-	font-size:18px;
-	margin-left:180px;
+#emailinvalid, #sscoreinvalid, #wscoreinvalid, #lscoreinvalid,
+	#ldateinvalid, #dobinvalid, #rscoreinvalid, #genderinvalid,
+	#provinceinvalid, #eduinvalid, #crsinvalid, #cocinvalid {
+	color: red;
+	font-size: 18px;
+	margin-left: 180px;
 }
 
 #btndiv {
-	margin-left:80px;
-	margin-top:30px;
-	margin-bottom:20px;
+	margin-left: 80px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 .resetbutton {
-	margin-left:50px;
+	margin-left: 50px;
 }
 
 #loginuser {
 	color: #1c5080;
-	font-size:25px;
+	font-size: 25px;
 	font-weight: bold;
-	margin-top:70px;
-	margin-bottom:-30px;
-	margin-left:900px;
+	margin-top: 70px;
+	margin-bottom: -30px;
+	margin-left: 900px;
 }
-
