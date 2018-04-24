@@ -1,7 +1,6 @@
 //Called on load of the page.
 window.onload = function() {
 	if (localStorage.getItem("loginuser") != null) {
-
 		$('#note1').show();
 		$('#note').hide();
 		$('#calButton').hide();
